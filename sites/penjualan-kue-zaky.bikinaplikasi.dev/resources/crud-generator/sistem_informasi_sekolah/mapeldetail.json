@@ -1,0 +1,31 @@
+{
+    "fields": [
+        {
+            "name": "guru_id",
+            "type": "select",
+            "options": [
+                {"id": "nama"}
+            ]
+        },{
+            "name": "mapel_id",
+            "type": "select",
+            "options": [
+                {"id": "nama"}
+            ]
+        }
+    ],
+    "foreign_keys": [
+    ],
+    "relationships": [
+    ],
+    "validations": [
+        {
+            "field": "guru_id",
+            "rules": "required|exists:guru,id"
+        },
+        {
+            "field": "mapel_id",
+            "rules": "required|exists:mapel,id"
+        }
+    ]
+}

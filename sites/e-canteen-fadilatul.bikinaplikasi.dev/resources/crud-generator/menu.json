@@ -1,0 +1,49 @@
+{
+    "fields": [{
+            "name": "penjual_id",
+            "type": "select",
+            "options": [{
+                "$penjual->id": "$penjual->nama"
+            }]
+        }, {
+            "name": "nama",
+            "type": "varchar"
+        }, {
+            "name": "harga",
+            "type": "integer"
+        }, {
+            "name": "deskripsi",
+            "type": "text"
+        }, {
+            "name": "stok",
+            "type": "select",
+            "options": [{
+                "Ada": "Ada",
+                "Kosong": "Kosong"
+            }]
+        }, {
+            "name": "gambar",
+            "type": "file"
+        }
+    ],
+
+    "foreign_keys": [],
+    "relationships": [],
+
+    "validations": [{
+        "field": "penjual_id",
+        "rules": "required|exists:penjual,id"
+    }, {
+        "field": "nama",
+        "rules": "required|unique:menu,nama"
+    }, {
+        "field": "harga",
+        "rules": "required|unique:menu,harga"
+    }, {
+        "field": "deskripsi",
+        "rules": "required"
+    }, {
+        "field": "gambar",
+        "rules": "file"
+    }]
+}

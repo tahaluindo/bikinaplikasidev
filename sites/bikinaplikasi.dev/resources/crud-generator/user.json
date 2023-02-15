@@ -1,0 +1,68 @@
+{
+    "fields": [{
+            "name": "name",
+            "type": "varchar"
+        },{
+            "name": "email",
+            "type": "email"
+        },
+        {
+            "name": "password",
+            "type": "password"
+        },
+        {
+            "name": "no_hp",
+            "type": "number"
+        },
+        {
+            "name": "level",
+            "type": "select",
+            "options": {
+                "Admin": "Admin",
+                "Pelanggan": "Pelanggan",
+                "Karyawan": "Karyawan"
+            }
+        },
+        {
+            "name": "status",
+            "type": "select",
+            "options": {
+                "Aktif": "Aktif",
+                "Tidak Aktif": "Tidak Aktif"
+            }
+        },
+        {
+            "name": "profile_photo_path",
+            "type": "varchar"
+        },
+        {
+            "name": "email_verified_at",
+            "type": "datetime"
+        }
+    ],
+
+    "foreign_keys": [],
+
+    "validations": [{
+        "field": "name",
+        "rules": "required|string|max:50"
+    }, {
+        "field": "email",
+        "rules": "required|email|max:100"
+    }, {
+        "field": "password",
+        "rules": "required|max:100"
+    }, {
+        "field": "password_confirmation",
+        "rules": "required|confirmed"
+    }, {
+        "field": "no_hp",
+        "rules": "required|phone:ID"
+    }, {
+        "field": "level",
+        "rules": "required|in:admin,pelanggan,karyawan"
+    }, {
+        "field": "status",
+        "rules": "required|in:Aktif,Tidak Aktif"
+    }]
+}

@@ -1,0 +1,103 @@
+{
+    "fields": [
+        {
+            "name": "kategori_id",
+            "type": "select",
+            "options": [
+                {
+                    "$id": "$nama"
+                }
+            ]
+        },
+        {
+            "name": "luas_tanah",
+            "type": "string"
+        },
+        {
+            "name": "nomor_kavling",
+            "type": "string"
+        },
+        {
+            "name": "harga",
+            "type": "integer"
+        },
+        {
+            "name": "angsuran",
+            "type": "integer"
+        },
+        {
+            "name": "ukuran",
+            "type": "string"
+        },
+        {
+            "name": "tipe",
+            "type": "string"
+        },
+        {
+            "name": "no_ppjb",
+            "type": "string"
+        },
+        {
+            "name": "no_ajb",
+            "type": "string"
+        },
+        {
+            "name": "status",
+            "type": "select",
+            "options": [
+                {
+                    "Terjual": "Terjual"
+                },
+                {
+                    "Belum Terjual": "Belum Terjual"
+                }
+            ]
+        }
+    ],
+    "foreign_keys": [
+    ],
+    "relationships": [
+    ],
+    "validations": [
+        {
+            "field": "kategori_id",
+            "rules": "required|exists:kategori,id"
+        },
+        {
+            "field": "luas_tanah",
+            "rules": "required"
+        },
+        {
+            "field": "nomor_kavling",
+            "rules": "required"
+        },
+        {
+            "field": "harga",
+            "rules": "required"
+        },
+        {
+            "field": "status",
+            "rules": "required|in:Terjual,Belum Terjual"
+        },
+        {
+            "field": "ukuran",
+            "rules": "required"
+        },
+        {
+            "field": "tipe",
+            "rules": "required"
+        },
+        {
+            "field": "no_ppjb",
+            "rules": "required|max:255"
+        },
+        {
+            "field": "no_ajb",
+            "rules": "required"
+        },
+        {
+            "field": "angsuran",
+            "rules": "required"
+        }
+    ]
+}

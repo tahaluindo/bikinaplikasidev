@@ -1,0 +1,49 @@
+{
+    "fields": [
+        {
+            "name": "nama",
+            "type": "string"
+        },{
+            "name": "expire_at",
+            "type": "date"
+        },{
+            "name": "harga_beli",
+            "type": "integer"
+        },{
+            "name": "harga_jual",
+            "type": "integer"
+        },{
+            "name": "stok",
+            "type": "integer"
+        },{
+            "name": "gambar",
+            "type": "file"
+        }
+    ],
+    "validations": [
+        {
+            "field": "produk_id",
+            "rules": "required|exists:produk,id"
+        },
+        {
+            "field": "expire_at",
+            "rules": "required|date"
+        },
+        {
+            "field": "harga_beli",
+            "rules": "required"
+        },
+        {
+            "field": "harga_jual",
+            "rules": "required"
+        },
+        {
+            "field": "stok",
+            "rules": "required"
+        },
+        {
+            "field": "gambar",
+            "rules": "required"
+        }
+    ]
+}

@@ -1,0 +1,102 @@
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-4">
+
+            <div class="card my-4">
+                <div class="container">
+                    <h1>Foto
+                        <small>Ini adalah foto profilemu</small>
+                    </h1>
+                    <div class="avatar-upload">
+                        <div class="avatar-edit">
+                            <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" name="foto"/>
+                            <label for="imageUpload"></label>
+                        </div>
+                        <div class="avatar-preview">
+                            <div id="imagePreview" style="background-image: url(/<%- barberKaryawan.user.foto ? barberKaryawan.user.foto : 'assets/img/no-camera.png' %>);" >
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="col-8">
+            <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3" style="background-image:linear-gradient(180deg, #C29A6B 0%, #886E4F 100%);
+              box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(233 159 30 / 40%) !important;">
+                        <h6 class="text-white text-capitalize ps-3">Edit Barber Karyawan</h6>
+                    </div>
+                </div>
+                <div class="card-body px-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <div class="container">
+                            <form action="/user/barber/karyawan/<%- barberKaryawan.id %>/update" enctype="multipart/form-data" method="post" id="form-edit-barber-karyawan-profile">
+                                <input type="hidden" value="" name="foto" id="foto">
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="nama">Nama</label>
+                                        <input type="text" class="form-control" id="nama"
+                                               placeholder="Nama" value="<%- barberKaryawan !== undefined ? barberKaryawan.user.nama : '' %>" name="nama" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email"
+                                               placeholder="BarberKaryawan" value="<%- barberKaryawan !== undefined ? barberKaryawan.user.email : '' %>" name="email" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="no_hp">No Hp</label>
+                                        <input type="no_hp" class="form-control" id="no_hp"
+                                               placeholder="No Hp" value="<%- barberKaryawan !== undefined ? barberKaryawan.user.no_hp : '' %>" name="no_hp" required>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="jabatan">Jabatan</label>
+                                        <select class="form-control" id="jabatan"
+                                                name="jabatan" required>
+                                            <option value="<%- barberKaryawan.jabatan || '' %>"><%- barberKaryawan.jabatan %></option>
+                                            <option value="Jabatan">Jabatan</option>
+                                            <option value="Jabatan">Jabatan</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="jenis_kelamin">Jenis Kelamin</label>
+                                        <select class="form-control" id="jenis_kelamin"
+                                                name="jenis_kelamin" required>
+                                            <option value="<%- barberKaryawan.jenis_kelamin || '' %>"><%- barberKaryawan.jenis_kelamin %></option>
+                                            <option value="Laki - Laki">Laki - Laki</option>
+                                            <option value="Perempuan">Perempuan</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <button type="submit"
+                                        style="box-shadow:0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(233 159 30 / 40%) !important"
+                                        class="btn btn-primary">Update
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

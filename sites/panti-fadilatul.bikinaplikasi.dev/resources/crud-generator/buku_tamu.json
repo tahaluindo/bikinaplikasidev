@@ -1,0 +1,22 @@
+{
+    "fields": [
+        {
+            "name": "nama",
+            "type": "string"
+        },
+        {
+            "name": "pesan_kesan",
+            "type": "string"
+        }
+    ],
+    "validations": [
+        {
+            "field": "nama",
+            "rules": "required|max:30"
+        },
+        {
+            "field": "pesan_kesan",
+            "rules": "required|max:255"
+        }
+    ]
+}

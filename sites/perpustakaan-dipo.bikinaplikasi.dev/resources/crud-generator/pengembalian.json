@@ -1,0 +1,54 @@
+{
+    "fields": [{
+            "name": "peminjaman_id",
+            "type": "select",
+            "options":{
+                "{{ $peminjaman->id }}" : "{{ $peminjaman->id }}"
+            }
+        },{
+            "name": "tanggal",
+            "type": "varchar"
+        },
+        {
+            "name": "denda_terlambat",
+            "type": "number"
+        },
+        {
+            "name": "denda_rusak",
+            "type": "number"
+        }
+    ],
+
+    "foreign_keys": [{
+        "column": "peminjaman_id",
+        "references": "id",
+        "on": "Peminjaman",
+        "onDelete": "cascade"
+    }],
+    "relationships": [{
+        "name": "anggota",
+        "type": "belongsTo",
+        "class": "App\\Models\\Anggota"
+    },{
+        "name": "peminjaman",
+        "type": "belongsTo",
+        "class": "App\\Models\\Peminjaman"
+    }],
+
+    "validations": [{
+        "field": "anggota_id",
+        "rules": "required|number|exists:anggota,id"
+    }, {
+        "field": "peminjaman_id",
+        "rules": "required|integer|exists:peminjaman,id"
+    }, {
+        "field": "tanggal",
+        "rules": "required|max:12"
+    }, {
+        "field": "denda_terlambat",
+        "rules": "required|integer|max:32000"
+    }, {
+        "field": "denda_rusak",
+        "rules": "required|integer|max:32000"
+    }]
+}

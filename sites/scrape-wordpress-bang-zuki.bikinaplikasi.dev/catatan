@@ -1,0 +1,7 @@
+CARA PAKAI PROGRAM
+
+1. buat database & import database sesuai pengaturan nama database di file .env
+2. php yang saya gunakan adalah php 7.3.26
+3. extract di htdocs, lalu buka link localhost/folderprogram/public/wordpress/scrape?semua=ya
+4. atau bsa juga bukak comand promp lalu ketikkan php artisan serv --port=1000 lalu buka di browser dengan localhost:1000/wordpress/scrape?semua=ya
+5. untuk mengecek seberapa banyak template yang udah di download, cek melalui database, di table theme, berapa baris yang sudah ada

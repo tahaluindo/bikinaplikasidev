@@ -1,0 +1,86 @@
+{
+    "data": {
+        "Bali": {
+            "Badung": [
+                "Abiansemal",
+                "Kuta",
+                "Kuta Selatan",
+                "Kuta Utara",
+                "Menguwi",
+                "Ngurah Rai",
+                "Petang"
+            ],
+            "Bangli": [
+                "Bangli",
+                "Kintamani",
+                "Susut",
+                "Tembuku"
+            ],
+            "Buleleng": [
+                "Banjar",
+                "Buleleng",
+                "Busung Biu",
+                "Gerokgak",
+                "Kubutambahan",
+                "Sawan",
+                "Seririt",
+                "Sukasada",
+                "Tejakula"
+            ],
+            "Denpasar": [
+                "Denpasar",
+                "Denpasar Barat",
+                "Denpasar Selatan",
+                "Denpasar Timur",
+                "Denpasar Utara"
+            ],
+            "Gianyar": [
+                "Blahbatuh",
+                "Gianyar",
+                "Payangan",
+                "Sukawati",
+                "Tampaksiring",
+                "Tegal Lalang",
+                "Ubud"
+            ],
+            "Jembrana": [
+                "Jembrana",
+                "Melaya",
+                "Mendoyo",
+                "Negara",
+                "Pekutatan"
+            ],
+            "Karangasem": [
+                "Abang",
+                "Bebandem",
+                "Karangasem",
+                "Kubu",
+                "Manggis",
+                "Rendang",
+                "Selat",
+                "Sidemen"
+            ],
+            "Klungkung": [
+                "Banjarangkan",
+                "Dawan",
+                "Klungkung",
+                "Nusapenida"
+            ],
+            "Tabanan": [
+                "Baturiti",
+                "Kediri",
+                "Kerambitan",
+                "Marga",
+                "Penebel",
+                "Pupuan",
+                "Selemadeg",
+                "Selemadeg Barat",
+                "Selemadeg Timur",
+                "Tabanan"
+            ]
+        }
+    },
+    "meta": {
+        "http_status": 200
+    }
+}

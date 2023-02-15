@@ -1,0 +1,25 @@
+{
+    "fields": [
+        {
+            "name": "nomor",
+            "type": "integer"
+        },
+        {
+            "name": "status",
+            "type": "select",
+            "options": [
+                {"Sudah": "Sudah"},
+                {"Belum": "Belum"},
+                {"Di Skip": "Di Skip"},
+                {"Sekarang": "Sekarang"}
+            ]
+        }
+    ],
+    "foreign_keys": [
+    ],
+    "relationships": [
+    ],
+    "validations": [
+        
+    ]
+}

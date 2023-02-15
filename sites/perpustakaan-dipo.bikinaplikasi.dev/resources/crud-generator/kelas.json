@@ -1,0 +1,19 @@
+{
+    "fields": [{
+            "name": "nama ",
+            "type": "varchar"
+        }
+    ],
+
+    "foreign_keys": [],
+    "relationships": [{
+        "name": "user",
+        "type": "hasMany",
+        "class": "App\\Models\\User"
+    }],
+
+    "validations": [{
+        "field": "nama",
+        "rules": "required|max:15"
+    }]
+}

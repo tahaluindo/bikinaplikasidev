@@ -1,0 +1,33 @@
+{
+    "fields": [
+        {
+            "name": "pelanggan_id",
+            "type": "select",
+            "options": {
+                "$item->id": "$item->nama"
+            }
+        },{
+            "name": "status",
+            "type": "select",
+            "options": {
+                "pending": "pending",
+                "selesai": "selesai",
+                "cancel": "cancel",
+                "refund": "refund"
+            }
+        },{
+            "name": "catatan",
+            "type": "text"
+        }
+    ],
+    "validations": [
+        {
+            "field": "pelanggan_id",
+            "rules": "required|exists:pelanggan,id"
+        },
+        {
+            "field": "status",
+            "rules": "required|in:pending,selesai,cancel,refund"
+        }
+    ]
+}

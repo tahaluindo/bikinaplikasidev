@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c4c4c22f-791c-4b5a-97f7-b4669f2123fc" name="DATASEO.CO.ID (project level)" url="http://DATASEO.CO.ID">
+        <fileTransfer host="DATASEO.CO.ID" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

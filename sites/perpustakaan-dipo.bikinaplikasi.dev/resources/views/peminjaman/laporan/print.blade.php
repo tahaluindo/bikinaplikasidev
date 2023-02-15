@@ -1,0 +1,37 @@
+    @extends('layouts.print')
+
+    @section('content')
+
+    <h3 align="center">LAPORAN PEMINJAMAN</h3>
+
+    <table width="100%" border="1" style='margin-bottom: 250px;'>
+        <thead>
+            <tr>
+                <th width=3>No.</th>
+                <th>Anggota Id</th>
+                <th>User Petugas Id</th>
+                <th>Tanggal</th>
+                <th>Tanggal Pengembalian</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach($peminjamans as $peminjaman)
+            <tr>
+                <th>{{ $loop->iteration }}.</th>
+                <td>{{ $peminjaman->anggota->nama }}</td>
+
+                <td>{{ $peminjaman->user_petugas->name }}</td>
+
+                <td>{{ $peminjaman->tanggal }}</td>
+
+                <td>{{ $peminjaman->tanggal_pengembalian }}</td>
+
+                <td>{{ $peminjaman->status }}</td>
+
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+    @endsection

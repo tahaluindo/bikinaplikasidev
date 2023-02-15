@@ -1,0 +1,1 @@
+SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'nis_siswa' cannot be null (SQL: update `tb_siswa` set `nis_siswa` = ?, `file_siswa` = 1654130003.jpg where `id_siswa` = 2)

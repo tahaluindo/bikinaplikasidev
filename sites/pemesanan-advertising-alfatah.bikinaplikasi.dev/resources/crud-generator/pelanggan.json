@@ -1,0 +1,21 @@
+{
+    "fields": [
+        {
+            "name": "nama",
+            "type": "string"
+        },
+        {
+            "name": "no_hp",
+            "type": "string"
+        }
+    ],
+    "validations": [
+        {
+            "field": "nama",
+            "rules": "required|max:30"
+        }, {
+            "field": "no_hp",
+            "rules": "required|max:15"
+        }
+    ]
+}

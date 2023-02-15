@@ -1,0 +1,35 @@
+php artisan dashboard:make user,anggota
+php artisan chart:make user,anggota
+php artisan sidebar:make session true #table laporan true / false
+php artisan formlaporan:make pengeluaran
+php artisan printlaporan:make pembelian id
+php artisan crud:generate Jenis --fields_from_file="resources\crud-generator\jenis.json" --controller-namespace=App\Http\Controllers --form-helper=html
+
+"foreign_keys": [{
+        "column": "user_id",
+        "references": "id",
+        "on": "users",
+        "onDelete": "cascade"
+    }],
+
+    "relationships": [{
+        "name": "user",
+        "type": "belongsTo",
+        "class": "App\\Models\\User"
+    }],
+    
+    {
+    "fields": [{
+            "name": "nama ",
+            "type": "varchar"
+        }
+    ],
+
+    "foreign_keys": [],
+    "relationships": [],
+
+    "validations": [{
+        "field": "nama",
+        "rules": "required|max:30"
+    }]
+}

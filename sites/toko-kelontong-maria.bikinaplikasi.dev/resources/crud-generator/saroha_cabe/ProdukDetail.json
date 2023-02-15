@@ -1,0 +1,30 @@
+{
+    "fields": [
+        {
+            "name": "tagihan_id",
+            "type": "integer"
+        }, {
+            "name": "jumlah",
+            "type": "integer"
+        }, {
+            "name": "cicilan_ke",
+            "type": "integer"
+        }
+    ],
+    "foreign_keys": [
+    ],
+    "relationships": [
+    ],
+    "validations": [
+        {
+            "field": "tagihan_id",
+            "rules": "required|exists:produk,id"
+        }, {
+            "field": "jumlah",
+            "rules": "required|min:1"
+        }, {
+            "field": "cicilan_ke",
+            "rules": "required|min:1"
+        }
+    ]
+}

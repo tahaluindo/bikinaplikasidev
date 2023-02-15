@@ -1,0 +1,30 @@
+{
+    "fields": [
+        {
+            "name": "jumlah",
+            "type": "integer"
+        },
+        {
+            "name": "tanggal",
+            "type": "date"
+        },
+        {
+            "name": "keterangan",
+            "type": "text"
+        }
+    ],
+    "validations": [
+        {
+            "field": "jumlah",
+            "rules": "required"
+        },
+        {
+            "field": "tanggal",
+            "rules": "required|date"
+        },
+        {
+            "field": "keterangan",
+            "rules": "required|max:255"
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "fields": [{
+        "name": "produk_id",
+        "type": "select",
+        "options": [{
+            "$produk->id": "$produk->nama"
+        }]
+    }, {
+        "name": "tahun_id",
+        "type": "select",
+        "options": [{
+            "$tahun->id": "$tahun->nama"
+        }]
+    }],
+
+    "foreign_keys": [],
+    "relationships": [],
+
+    "validations": [{
+        "field": "produk",
+        "rules": "required|exists:produk,id"
+    },{
+        "field": "tahun",
+        "rules": "required|exists:tahun,id"
+    }]
+}

@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloweb
+  labels:
+    app.kubernetes.io/name: helloweb
+    app.kubernetes.io/component: backend
+spec:
+  ports:
+  - port: 8080
+    targetPort: 8080
+    
+  selector:
+    app.kubernetes.io/name: helloweb
+    app.kubernetes.io/component: backend

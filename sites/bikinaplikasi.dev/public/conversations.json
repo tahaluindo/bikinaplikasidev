@@ -1,0 +1,71 @@
+[
+    {
+        "id": "388003244199940285",
+        "to_id": 90339045,
+        "to_name": "ramdanriawan3",
+        "to_avatar": "",
+        "to_status": "normal",
+        "is_blocked": false,
+        "shop_id": 373048388,
+        "to_shop_id": 90337567,
+        "status": "",
+        "unread_count": 1,
+        "crm_message_preview": {
+            "text": "",
+            "translated_text": null
+        },
+        "pinned": false,
+        "last_read_message_id": "2075733326538637498",
+        "latest_message_id": "2075733692565110969",
+        "latest_message_type": "text",
+        "latest_message_content": {
+            "text": "jdkjd dmskskks dkksjaj dmsmsnns"
+        },
+        "latest_message_from_id": 90339045,
+        "last_message_time": "2021-04-07T18:36:52+07:00",
+        "last_message_time_nano": "1617795412436482095",
+        "last_message_state": "user_chat",
+        "last_message_option": 4,
+        "next_timestamp": 1612938248,
+        "next_timestamp_nano": "1612938248620543812",
+        "flag": "",
+        "auto_translation": false,
+        "max_general_option_hide_time": "9223372036854775",
+        "entry_point": ""
+    },
+    {
+        "id": "388003244199940285",
+        "to_id": 90339045,
+        "to_name": "ramdanriawan3",
+        "to_avatar": "",
+        "to_status": "normal",
+        "is_blocked": false,
+        "shop_id": 373048388,
+        "to_shop_id": 90337567,
+        "status": "",
+        "unread_count": 0,
+        "crm_message_preview": {
+            "text": "",
+            "translated_text": null
+        },
+        "pinned": false,
+        "last_read_message_id": "2076097330117279929",
+        "latest_message_id": "2076097330117279929",
+        "latest_message_type": "text",
+        "latest_message_content": {
+            "text": "Masok"
+        },
+        "latest_message_from_id": 373067965,
+        "last_message_time": "2021-04-09T18:46:48+07:00",
+        "last_message_time_nano": "1617968808332495275",
+        "last_message_state": "user_chat",
+        "last_message_option": 4,
+        "next_timestamp": 1612938248,
+        "next_timestamp_nano": "1612938248620543812",
+        "flag": "",
+        "auto_translation": false,
+        "max_general_option_hide_time": "9223372036854775",
+        "entry_point": "",
+        "lack": false
+    }
+]

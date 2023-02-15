@@ -1,0 +1,15 @@
+{
+    "fields": [{
+            "name": "no",
+            "type": "integer"
+        }
+    ],
+
+    "foreign_keys": [],
+    "relationships": [],
+
+    "validations": [{
+        "field": "no",
+        "rules": "required|unique:meja,no"
+    }]
+}

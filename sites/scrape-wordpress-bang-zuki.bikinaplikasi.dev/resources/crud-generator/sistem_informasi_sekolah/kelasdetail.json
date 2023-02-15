@@ -1,0 +1,35 @@
+{
+    "fields": [
+        {
+            "name": "kelas_id",
+            "type": "select",
+            "options": [
+                {
+                    "id": "nama"
+                }
+            ]
+        }, {
+            "name": "siswa_id",
+            "type": "select",
+            "options": [
+                {
+                    "id": "nama"
+                }
+            ]
+        }
+    ],
+    "foreign_keys": [
+    ],
+    "relationships": [
+    ],
+    "validations": [
+        {
+            "field": "kelas_id",
+            "rules": "required|exists:kelas,id"
+        },
+        {
+            "field": "siswa_id",
+            "rules": "required|exists:siswa,id"
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "fields": [
+        {
+            "name": "jenis_id",
+            "type": "select",
+            "options": {
+                "Ketua": "Ketua"
+            }
+        },
+        {
+            "name": "kode",
+            "type": "string"
+        },
+        {
+            "name": "nama",
+            "type": "string"
+        },
+        {
+            "name": "jumlah",
+            "type": "integer"
+        },
+        {
+            "name": "umur_manfaat",
+            "type": "integer"
+        },
+        {
+            "name": "harga_per_unit",
+            "type": "integer"
+        },
+        {
+            "name": "nilai_perolehan",
+            "type": "integer"
+        },
+        {
+            "name": "penyusutan_per_tahun",
+            "type": "integer"
+        },
+        {
+            "name": "kondisi",
+            "type": "select",
+            "options": {
+                "Baik": "Baik",
+                "Rusak Ringan": "Rusak Ringan",
+                "Rusak Berat": "Rusak Berat"
+            }
+        }
+    ],
+    "validations": [
+        {
+            "field": "jenis_id",
+            "rules": "required|exists:jenis,id"
+        },
+        {
+            "field": "kode",
+            "rules": "required|max:5"
+        },
+        {
+            "field": "nama",
+            "rules": "required|max:30"
+        },
+        {
+            "field": "jumlah",
+            "rules": "required"
+        },
+        {
+            "field": "umur_manfaat",
+            "rules": "required"
+        },
+        {
+            "field": "harga_per_unit",
+            "rules": "required"
+        },
+        {
+            "field": "nilai_perolehan",
+            "rules": "required"
+        },
+        {
+            "field": "penyusutan_per_tahun",
+            "rules": "required"
+        },
+        {
+            "field": "kondisi",
+            "rules": "required|in:Baik,Rusak Ringan,Rusak Berat"
+        }
+    ]
+}

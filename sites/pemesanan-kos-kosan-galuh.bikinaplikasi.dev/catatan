@@ -1,0 +1,464 @@
+Welcome To | Bootstrap Based Admin Template - Material Design
+
+                            <ul class="list-group" id='listFasilitasTersedia'>
+                                <li class="list-group-item disabled"><h4>Fasilitas Tersedia</h4></li>
+
+                                {{-- tambah fasilitas --}}
+                                <li class="list-group-item">
+                                    <div class="input-group">
+                                        <div class="input-group-addon mb-0">
+                                            <button id="btnFasilitasAdd" type="button" class="btn btn-sm btn-blue  waves-effect" style="color: white;">
+                                                <i class="material-icons">add</i>
+                                            </button>
+                                        </div>
+                                        <input type="text" class="form-control" id='inputFasilitasAdd' name="inputFasilitasAdd" maxlength="50" placeholder="Input Fasilitas Baru">
+                                    </div>
+                                </li>
+                                @foreach($fasilitasies as $fasilitas)
+                                <li class="list-group-item">
+                                    <div class="form-check">
+                                        <input type="checkbox" name='fasilitas[]' class="form-check-input" id="{{ $fasilitas }}" value="{{ $fasilitas }}">
+                                        <label class="form-check-label" for="{{ $fasilitas }}">{{ $fasilitas }}</label>
+                                    </div>
+                                </li>
+                                @endforeach
+
+                            </ul>
+
+
+<script>
+    $(document).ready(function(){
+
+        function toCamelCase(str){
+          return str.split(' ').map(function(word,index){
+            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+          }).join(' ');
+        }
+
+        $("#btnFasilitasAdd").on('click', function(){
+            var fasilitasAddValue = $("#inputFasilitasAdd").val();
+
+            if ( fasilitasAddValue.length == 0)
+            {
+                alert("Mohon masukkan text fasilitas yang akan ditambah");
+                return;
+            }
+
+            //mengecek apakah sudah ditambahkan atau belum
+            for(var i = 0; i < $('#listFasilitasTersedia li div input[type=checkbox]').length; i++) {
+                if ($('#listFasilitasTersedia li div input[type=checkbox]').eq(i).val().toLowerCase() == fasilitasAddValue.toLowerCase())
+                {
+                    alert("Fasilitas sudah ada, tambah text fasilitas lain!");
+                    return;
+                }
+            }
+
+            $('#listFasilitasTersedia li:eq(1)').after(`
+                <li class="list-group-item">
+                    <div class="form-check">
+                        <input type="checkbox" name='fasilitas[]' class="form-check-input" value="${toCamelCase(fasilitasAddValue)}" id='${toCamelCase(fasilitasAddValue)}'>
+                        <label class="form-check-label" for="${toCamelCase(fasilitasAddValue)}">${toCamelCase(fasilitasAddValue)}</label>
+                    </div>
+                </li>
+            `);
+        })
+    })
+</script>
+
+                            
+                            <ul class="list-group" id='listFasilitasTersedia'>
+                                <li class="list-group-item disabled"><h4>Fasilitas Tersedia</h4></li>
+
+                                {{-- tambah fasilitas --}}
+                                <li class="list-group-item">
+                                    <div class="input-group">
+                                        <div class="input-group-addon mb-0">
+                                            <button id="btnFasilitasAdd" type="button" class="btn btn-sm btn-blue  waves-effect" style="color: white;">
+                                                <i class="material-icons">add</i>
+                                            </button>
+                                        </div>
+                                        <input type="text" class="form-control" id='inputFasilitasAdd' name="inputFasilitasAdd" maxlength="50" placeholder="Input Fasilitas Baru">
+                                    </div>
+                                </li>
+
+                                @foreach($fasilitasies as $fasilitas)
+                                    @if($data->fasilitas !== '')
+                                        @if(strpos($data->fasilitas, $fasilitas) !== false)
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input checked type="checkbox" name='fasilitas[]' class="form-check-input" id="{{ $fasilitas }}" value="{{ $fasilitas }}">
+                                                <label class="form-check-label" for="{{ $fasilitas }}">{{ $fasilitas }}</label>
+                                            </div>
+                                        </li>
+                                        @else
+                                            
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input type="checkbox" name='fasilitas[]' class="form-check-input" id="{{ $fasilitas }}" value="{{ $fasilitas }}">
+                                                <label class="form-check-label" for="{{ $fasilitas }}">{{ $fasilitas }}</label>
+                                            </div>
+                                        </li>
+
+                                        @endif
+                                    @else
+                                        @if($fasilitas === '')
+                                            @php continue; @endphp   
+                                        @endif
+
+                                        <li class="list-group-item">
+                                            <div class="form-check">
+                                                <input type="checkbox" name='fasilitas[]' class="form-check-input" id="{{ $fasilitas }}" value="{{ $fasilitas }}">
+                                                <label class="form-check-label" for="{{ $fasilitas }}">{{ $fasilitas }}</label>
+                                            </div>
+                                        </li>
+                                    @endif
+                                @endforeach
+                            </ul>
+<!-- #END# Input -->
+
+<script>
+    $(document).ready(function(){
+
+        function toCamelCase(str){
+          return str.split(' ').map(function(word,index){
+            return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+          }).join(' ');
+        }
+
+        $("#btnFasilitasAdd").on('click', function(){
+            var fasilitasAddValue = $("#inputFasilitasAdd").val();
+
+            if ( fasilitasAddValue.length == 0)
+            {
+                alert("Mohon masukkan text fasilitas yang akan ditambah");
+                return;
+            }
+
+            //mengecek apakah sudah ditambahkan atau belum
+            for(var i = 0; i < $('#listFasilitasTersedia li div input[type=checkbox]').length; i++) {
+                if ($('#listFasilitasTersedia li div input[type=checkbox]').eq(i).val().toLowerCase() == fasilitasAddValue.toLowerCase())
+                {
+                    alert("Fasilitas sudah ada, tambah text fasilitas lain!");
+                    return;
+                }
+            }
+
+            $('#listFasilitasTersedia li:eq(1)').after(`
+                <li class="list-group-item">
+                    <div class="form-check">
+                        <input type="checkbox" name='fasilitas[]' class="form-check-input" value="${toCamelCase(fasilitasAddValue)}" id='${toCamelCase(fasilitasAddValue)}'>
+                        <label class="form-check-label" for="${toCamelCase(fasilitasAddValue)}">${toCamelCase(fasilitasAddValue)}</label>
+                    </div>
+                </li>
+            `);
+        })
+    })
+</script>
+
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Type;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+
+class TypeController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+        $data['datas'] = Type::orderBy('id', 'desc')->limit(50)->get();
+        return view('type.index', $data);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+        $fasilitasies = Type::pluck('fasilitas');
+        $data['fasilitasies'] = array_unique(explode(",", implode(",", $fasilitasies->toArray())));
+
+        return view('type.create', $data);
+
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        // custom validation
+        $request['total'] = $request->harga_harian + $request->harga_mingguan + $request->harga_bulanan + $request->harga_tahunan;
+
+        $request['harga_harian'] = (int) $request->harga_harian;
+        $request['harga_mingguan'] = (int) $request->harga_mingguan;
+        $request['harga_bulanan'] = (int) $request->harga_bulanan;
+        $request['harga_tahunan'] = (int) $request->harga_tahunan;
+
+        $this->validate($request, [
+            'nama' => ['required', 'max:50', 'min:1', 'alpha_num' ],
+            'harga_harian' => 'digits_between:1,9',
+            'harga_mingguan' => 'digits_between:1,9|gte:harga_harian',
+            'harga_bulanan' => 'digits_between:1,9|gte:harga_mingguan',
+            'harga_tahunan' => 'digits_between:1,9|gte:harga_bulanan',
+            'total' => [function ($attribute, $value, $fail) use ($request) {
+                    if ($request['total'] == 0) {
+                        return back()->with('error', 'Mohon mengisi salah satu harga!');
+                    }
+                },
+            ],
+            'keterangan' => 'max:500',
+            'fasilitas' => 'required'
+        ]);
+
+        $request['fasilitas'] = implode(',', $request['fasilitas']);
+
+        $typeSave = Type::create($request->except(['_token', 'total', 'inputFasilitasAdd']))->save();
+
+        return back()->with('success', 'Berhasil menambah type');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\Type  $type
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Type $type)
+    {
+        //
+        $data['data'] = $type;
+        
+        return view('type.show', $data);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Type  $type
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Type $type)
+    {
+        //
+        $datas['data'] = $type;
+        $datas['fasilitasies'] = array_unique(explode(',', implode(',', Type::pluck('fasilitas')->toArray())));
+
+        // $datas['fasilitasies'] = explode(',', $type->fasilitas);
+
+        return view('type.edit', $datas);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Type  $type
+     * @return \Illuminate\Http\Response
+     */
+
+    public function update(Request $request, Type $type)
+    {
+        //
+        // custom validation
+        $request['total'] = $request->harga_harian + $request->harga_mingguan + $request->harga_bulanan + $request->harga_tahunan;
+
+        $request['harga_harian'] = (int) $request->harga_harian;
+        $request['harga_mingguan'] = (int) $request->harga_mingguan;
+        $request['harga_bulanan'] = (int) $request->harga_bulanan;
+        $request['harga_tahunan'] = (int) $request->harga_tahunan;
+
+        $this->validate($request, [
+            'nama' => ['required', 'max:50', 'min:1', 'alpha_num' ],
+            'harga_harian' => 'digits_between:1,9',
+            'harga_mingguan' => 'digits_between:1,9|gte:harga_harian',
+            'harga_bulanan' => 'digits_between:1,9|gte:harga_mingguan',
+            'harga_tahunan' => 'digits_between:1,9|gte:harga_bulanan',
+            'total' => [function ($attribute, $value, $fail) use ($request) {
+                    if ($request['total'] == 0) {
+                        return back()->with('error', 'Mohon mengisi salah satu harga!');
+                    }
+                },
+            ],
+            'keterangan' => 'max:500',
+            'fasilitas' => 'required'
+        ]);
+        
+        $request['fasilitas'] = implode(',', $request['fasilitas']);
+    
+        $typeSave = Type::find($type->id)->update($request->except(['_token', 'total', 'inputFasilitasAdd']));
+
+        return back()->with('success', 'Berhasil mengupdate type');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Type  $type
+     * @return \Illuminate\Http\Response
+     */
+    
+    public function destroy(Type $type)
+    {
+        //
+        Type::findOrFail($type->id)->delete();
+
+        return back()->with('success', "Berhasil menghapus type $type->nama");
+    }
+}
+
+
+@extends('layouts.index')
+
+@section('content')
+
+<div class="block-header">
+</div>
+<!-- Input -->
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    Tagihan
+                </h2>
+                <ul class="header-dropdown m-r--5">
+                    <li class="dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <i class="material-icons">more_vert</i>
+                        </a>
+                        <ul class="dropdown-menu pull-right">
+                            <li><a href="javascript:void(0);">Action</a></li>
+                            <li><a href="javascript:void(0);">Another action</a></li>
+                            <li><a href="javascript:void(0);">Something else here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="body">
+                <h2 class="card-inside-title">Tambah Tagihan</h2>
+                <div class="row clearfix">
+                    <div class="col-sm-12">
+
+                        <form id="form_validation" method="POST" action='{{ url("tagihan") }}'>
+                            {{ csrf_field() }}
+
+                            <div class="form-group form-float">
+                                <div class="form-line {{ $errors->has('penyewa_id') ? "focused error" : "" }}">
+                                    <select name="penyewa_id" class="form-control" required>
+                                        <option value="">--Pilih Penyewa--</option>
+                                        @foreach($penyewas as $penyewa)
+                                            <option value="{{ $penyewa->id }}">
+                                                {{ $penyewa->nama }} | Kamar: {{ $penyewa->kamar->nomor }} | Type: {{ $penyewa->type_sewa->nama }} | {{ $penyewa->nama }} | {{ $penyewa->no_hp }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                @if($errors->has('penyewa_id'))
+                                    <label id="name-error" class="error" for="name">{{ $errors->first('penyewa_id') }}</label>
+                                @endif
+                            </div>
+
+                            <div class="form-group form-float">
+                                <div class="form-line {{ $errors->has('invoice_id') ? "focused error" : "" }}">
+                                    <input name='invoice_id' type="text" class="form-control" placeholder="Nama" maxlength="50" minlength="1" value="{{ $invoice_id }}" readonly />
+                                </div>
+                                @if($errors->has('invoice_id'))
+                                    <label id="name-error" class="error" for="name">{{ $errors->first('invoice_id') }}</label>
+                                @endif
+                            </div>
+
+                            <div class="form-group form-float">
+                                <div class="form-line {{ $errors->has('type_id') ? "focused error" : "" }}">
+                                    <select name="type_id" class="form-control" required>
+                                        <option value="">--Pilih Type--</option>
+                                        @foreach($types as $type)
+                                            <option value="{{ $type->id }}">
+                                                {{ $type->nama }} | {{ $type->harga_harian }} | {{ $type->harga_mingguan }} | {{ $type->harga_bulanan }} | {{ $type->harga_tahunan }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                                @if($errors->has('type_id'))
+                                    <label id="name-error" class="error" for="name">{{ $errors->first('type_id') }}</label>
+                                @endif
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-line {{ $errors->has('nomor') ? "focused error" : "" }}">
+                                    <input name='nomor'  type="number" class="form-control" placeholder="Nomor"  value='{{ old("nomor") }}' min='0' max='100' />
+                                    @if($errors->has('nomor'))
+                                        <label id="name-error" class="error" for="name">{{ $errors->first('harga_harian') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group form-float">
+                                <div class="form-line {{ $errors->has('status') ? "focused error" : "" }}">
+                                    <select name="status" class="form-control" required>
+                                        <option value="">--Pilih Status Kamar--</option>
+                                            <option value="Terisi">Terisi</option>
+                                            <option value="Kosong">Kosong</option>
+                                            <option value="Ditinggal">Ditinggal</option>
+                                            <option value="Rusak">Rusak</option>
+                                    </select>
+                                </div>
+                                @if($errors->has('status'))
+                                    <label id="name-error" class="error" for="name">{{ $errors->first('status') }}</label>
+                                @endif
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-line {{ $errors->has('jumlah_penghuni') ? "focused error" : "" }}">
+                                    <input  name='jumlah_penghuni' type="number" class="form-control" placeholder="Jumlah Penghuni"  value='{{ old("jumlah_penghuni") }}'  min='0' max='5' />
+                                    @if($errors->has('jumlah_penghuni'))
+                                        <label id="name-error" class="error" for="name">{{ $errors->first('jumlah_penghuni') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-line {{ $errors->has('keterangan') ? "focused error" : "" }}">
+                                    <textarea name='keterangan' class="form-control" placeholder="Deskripsi" maxlength="500">{{ old("keterangan") }}</textarea>
+                                    @if($errors->has('keterangan'))
+                                        <label id="name-error" class="error" for="name">{{ $errors->first('keterangan') }}</label>
+                                    @endif
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="form-line">
+                                    <button type="submit" class="btn bg-blue waves-effect">
+                                        <i class="material-icons">add</i>
+                                        <span class="icon-name">Tambah</span>
+                                    </button>
+
+                                    <button type="reset" class="btn btn-warning waves-effect">
+                                        <i class="material-icons">refresh</i>
+                                        <span class="icon-name">Reset</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- #END# Input -->
+@endsection

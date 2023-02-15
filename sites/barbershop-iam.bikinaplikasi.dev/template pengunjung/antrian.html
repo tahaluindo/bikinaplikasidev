@@ -1,0 +1,661 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Antrian Barber </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+   <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+    <!--? Preloader Start -->
+  
+<Style>
+    body{
+        background-color: black;
+        overflow-x: hidden; 
+  max-width: calc(100% - 20px);
+  margin: 0 auto;
+  padding: 0 10px;
+    }
+
+    #em1, #em2 { font-size: 1.5em; }
+
+    @import url(https://fonts.googleapis.com/css?family=Playfair+Display);
+/* defaultSet */
+html, body, div, p, h1, h2, h3, h4, h5, h6, ol, ul, li, dl, dt, dd, section, article, main, footer, header, nav, button {margin:0; padding:0;}
+ol, ul, li {list-style-type:none;}
+h1, h2, h3, h4, h5, h6, strong {font-weight:normal; font-size: 2vw}
+em {font-style:normal;}
+
+.subHead {color: #fff;}
+.subHead strong {font-family:'Helvetica Bold'; font-size:28px; display:block;}
+.subHead small {display:block; margin-bottom:4px; font-size:16px;}
+ol.digits {height:80px;margin-bottom:6px;overflow:hidden;}
+.digits > li {float:left;padding:0}
+.cou-item > ol { width: width:45px;}
+.cou-item > ol > li {color: #fff; font-size: 83px; line-height: 77px;height:77px; font-family: 'Playfair Display', serif;padding:0;width:46px;}
+/* float 해제 */
+.clear {display: inline-block;}
+.clear:after {content: *.*;	height:0; visibility:hidden; display:block;	clear:both;}
+* html .clear {	height:1%;}
+
+.companyProfile { background: #050505 url("https://goo.gl/CzXJvA") no-repeat center 0; background-size: cover; text-align: center; }
+.companyProfile .profile { text-align: center; }
+.companyProfile .profile dl { padding: 0 6%; }
+.companyProfile .profile dl dt { font-size: 4vw; color: #dcb789; font-weight: bold; padding: 10px 0; font-family: 'Helvetica Bold'; }
+.companyProfile .profile dl dd { font-size: 4vw; color: #cfcfcf; }
+
+.companyProfile .profileList { padding-top: 20px; }
+.companyProfile .profileList ul { padding: 0 5%; overflow: hidden; position: relative; }
+.companyProfile .profileList ul li { text-align: center; box-sizing: border-box; padding: 0; }
+.companyProfile .profileList ul li div { max-width: 270px; box-sizing: border-box; border: 1px solid #2c2d2e; border: 1px solid rgba(255, 255, 255, .15); padding: 50px 10px 30px 10px; margin: 0 auto; }
+.companyProfile .profileList ul li div strong { color: #fff; font-size: 90px; line-height: 1; font-family: 'Playfair Display', serif; }
+.companyProfile .profileList ul li div strong.billion { display: inline-block; vertical-align: super; height: 40px; }
+.companyProfile .profileList ul li div strong span { font-size: 30px; }
+.companyProfile .profileList ul li div p { padding-top: 20px; height: 35px; color: #cccccc; font-weight: bold; font-size: 12px; text-transform: uppercase; font-family: 'Helvetica Bold';}
+
+.companyProfile .profileList ul li.s1 { float: left; width: 100%; min-width: 270px; padding-bottom: 20px;  }
+.companyProfile .profileList ul li.s2 { float: left; width: 100%; min-width: 270px; padding-bottom: 20px;  }
+.companyProfile .profileList ul li.s3 { float: left; width: 100%; padding-bottom: 60px; }
+.companyProfile .profileList ul li.s4 { float: left; width: 33.33%; padding-bottom: 60px; }
+.companyProfile .profileList ul li.s5 { float: left; width: 33.33%; padding-bottom: 60px; }
+.companyProfile .profileList ul li.s6 { float: left; width: 50%; min-width: 290px; padding-left: 18%;}
+.companyProfile .profileList ul li.s7 { float: left; width: 50%; min-width: 290px; padding-right: 18%; }
+
+.fa {display:block;color:#dcb789;font-size:34px;}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  line-height: 4rem;
+  color: rgba(255, 255, 255, 0.2);
+  background-color: #000;
+  outline: 0;
+  border: 0;
+  border-radius: 100%;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
+  transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+button i {
+  display: block;
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+button:hover {
+  cursor: pointer;
+  background-color: #000;
+  transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+button:hover i {
+  color: #fff;
+  transition: color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+button:active {
+  background-color: #000;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.6);
+  transition: background 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+button:active i {
+  transform: rotate(360deg);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mast {
+  display: block;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  min-height: auto;
+  width: 100%;
+  max-width: 80em;
+  margin: 0 auto;
+  padding-top: 100px !important;
+  padding: 3em 1em;
+}
+@media (min-width: 40em) {
+  .mast {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+.mast__img {
+  margin: 0 auto 1.5em;
+}
+@media (min-width: 40em) {
+  .mast__img {
+    margin: 0 auto;
+  }
+}
+.mast__img img {
+  display: block;
+  max-width: 34em;
+  width: 100%;
+  margin: 0 auto;
+  filter: invert(1);
+  mix-blend-mode: screen;
+}
+@media (min-width: 62em) {
+  .mast__img img {
+    max-width: 50em;
+  }
+}
+.mast__img figcaption {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin: -1em auto 0;
+}
+.mast__img:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+.mast__title {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.25em;
+}
+.mast .title-line {
+  display: block;
+  padding-bottom: 0.1em;
+  overflow-y: hidden;
+  background-color: #000;
+}
+.mast .title-line span {
+  position: relative;
+  display: inline-block;
+}
+.mast__text {
+  color: #fff;
+  font-size: 40%;
+  max-width: 15em;
+}
+@media (min-width: 40em) {
+  .mast__text {
+    font-size: 10%;
+  }
+}
+
+.animated .mast__img:after {
+  -webkit-animation: slide-up 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+          animation: slide-up 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+.animated .mast .title-line span {
+  -webkit-animation: text-up 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+          animation: text-up 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+.animated .mast .title-line:nth-of-type(2) span {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+.animated .mast .title-line:nth-of-type(3) span {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.animated .mast .title-line:nth-of-type(4) span {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.animated .mast__text {
+  -webkit-animation: fade-in 1s 0.5s ease both;
+          animation: fade-in 1s 0.5s ease both;
+}
+.animated button i {
+  -webkit-animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+          animation: spin 1s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@-webkit-keyframes text-up {
+  from {
+    transform: translate3d(0, 150%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes text-up {
+  from {
+    transform: translate3d(0, 150%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes slide-up {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -110%, 0);
+  }
+}
+@keyframes slide-up {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -110%, 0);
+  }
+}
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+</Style>
+ 
+<body>
+<Style></Style>
+ 
+    <section class="subCont companyProfile section" id="companyProfile">
+        <div class="contents" style="margin-top:5vw">
+          <div class="row">
+            <div class="col-md-3"> 
+          <img style="border-radius:100%; width:10vw; height: 10vw; " src="https://images.squarespace-cdn.com/content/v1/5ed444a9a0e166123ef40c38/1592236566486-MY6CYHLD1X594HE932WC/The_Bearded_Barber_Logo.png?format=1000w">
+          </div>
+          <div class="col-md-6">
+          <h2 class="subHead comh3 opa0" style="font-size:6vw"> <strong>NOMOR ANTRIAN </strong></h2>
+            <article class="profile comh4 opa0">
+                <dl>
+                    <dt>Tiket Online</dt>
+                </dl>
+            </article>
+          </div>
+
+          <div class="col-md-3">
+           </div>
+         </div>
+    <div class="container">
+        <div class="row" STYLE="MARGIN-TOP:30PX">
+
+          <div class="col-lg-4 " style="">
+          <h2 class="subHead comh3 opa0" style="font-size:6vw"> <strong>KODE BOKING </strong></h2>
+          </div>
+          
+          <div class="col-lg-4 " style="">
+            <h2 class="subHead comh3 opa0" style="font-size:6vw ;text-align: left;"> <strong>Customer</strong></h2>
+          </div>
+
+          <div class="col-lg-4 " style="">
+            <h2 class="subHead comh3 opa0" style="font-size:6vw"> <strong>Status</strong></h2>
+          </div>
+
+      </div>
+    </div>
+    
+
+
+<div class="container">
+        <div class="row"> 
+          <div class="col-lg-4 " style="">
+                <article class="profile comh4 opa0">
+                    <article class="profileList forWeb">
+                        <ul>
+                
+                        <li class="s1">
+                            <div style="">
+                                <!-- 1999  --> 
+                                <strong class="billion"><span></span></strong>
+                                <ol class="digits clear">
+                                     
+                                    <li class="digit">
+                                        <span class="cou-item">
+                                            <ol class="nb12">
+                                                <li>9</li>
+                                                <li>0</li>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li>0</li>
+                                            </ol>
+                                        </span>
+                                    </li>
+                                     
+                                    <li class="digit">
+                                        <span class="cou-item cou-item-anim">
+                                            <ol class="nb14">
+                                                <li>9</li>
+                                                <li>0</li>
+                                                <li>1</li>
+                                                <li>2</li>
+                                                <li>3</li>
+                                                <li>4</li>
+                                                <li>5</li>
+                                                <li>6</li>
+                                                <li>7</li>
+                                                <li>8</li>
+                                                <li>9</li>
+                                                <li>0</li>
+                                            </ol>
+                                        </span>
+                                    </li>
+                                </ol>
+                                <p>Antrian</p>
+                            </div>
+                        </li>
+                        </ul>
+                    </article>
+                </article>
+                </div>
+             
+            <div class="col-lg-4" style=" text-align: left;">
+               
+                        <article class="profile comh4 opa0">
+                            <article class="profileList forWeb">
+                                <ul style="padding-left: 0px">
+                                   
+                                    <li class="s2">
+                                        <div style=" text-align: left;margin-left: 0px;">
+                                              <!-- 15  -->
+                                            
+                                            <p style="font-size:27px; color:#dcb789">Ariana Grande</p>
+                                            <br>
+                                            <br>
+                                            <p >Nama customer</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </article>
+                            </article>
+            </div>
+                
+            <div class="col-lg-4" style="">
+            
+              <article class="profile comh4 opa0">
+                <article class="profileList forWeb">
+                  <ul>
+            
+                    <li class="s2">
+                      <div> 
+                        <!-- 15  -->
+                     
+                        <p style="font-size:32px; color:greenyellow">Ready</p>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                      </div>
+                    </li>
+                  </ul>
+                </article>
+              </article>
+            </div>
+             </div>
+            
+        </div>
+  
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <div class="row" STYLE="MARGIN-TOP:30PX">
+
+    <div class="col-lg-4 " style="">
+      <h2 class="subHead comh3 opa0" style="font-size:3vw"> <strong>Next Booking </strong></h2>
+    </div>
+
+    <div class="col-lg-4 " style=" text-align: left;">
+      <h2 class="subHead comh3 opa0" style="font-size:3vw"> <strong>Customer</strong></h2>
+    </div>
+
+    <div class="col-lg-4 " style="">
+      <h2 class="subHead comh3 opa0" style="font-size:3vw"> <strong>Status</strong></h2>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 " style="">
+      <article class="profile comh4 opa0">
+        <article class="profileList forWeb">
+          <ul>
+
+            <li class="s1">
+              <div style="padding-top: 10px; padding-bottom: 10px;">
+                <!-- 1999  -->
+                <strong class="billion"><span></span></strong>
+                <ol class="digits clear">
+                  <li class="digit">
+                    <span class="cou-item cou-item-anim">
+                      <ol class="nb11">
+                        <li>7</li>
+                        <li>0</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>0</li>
+                      </ol>
+                    </span>
+                  </li>
+                  <li class="digit">
+                    <span class="cou-item">
+                      <ol class="nb12">
+                        <li>0</li>
+                        <li>0</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>0</li>
+                      </ol>
+                    </span>
+                  </li>
+
+                  <li class="digit">
+                    <span class="cou-item cou-item-anim">
+                      <ol class="nb14">
+                        <li>0</li>
+                        <li>0</li>
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                        <li>6</li>
+                        <li>7</li>
+                        <li>8</li>
+                        <li>9</li>
+                        <li>0</li>
+                      </ol>
+                    </span>
+                  </li>
+                </ol>  
+  <ol class="digits clear" style="padding-top:20px; padding-left:20px">
+  <?xml version="1.0" ?>
+  <!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+  <svg stlye="color:#dcb789"
+    enable-background="new 0 0 26 26" height="26px" id="Layer_1" version="1.1" viewBox="0 0 26 26" width="26px"
+    xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g>
+      <polygon fill="#dcb789"
+        points="0.046,24.418 2.13,26.502 12.967,15.666 23.803,26.502 25.887,24.418 12.967,11.498  " />
+      <polygon fill="#dcb789" points="0.046,13.418 2.13,15.502 12.967,4.666 23.803,15.502 25.887,13.418 12.967,0.498  " />
+    </g>
+  </svg>
+  </ol>
+  </div>
+            </li>
+          </ul>
+        </article>
+      </article>
+    </div>
+
+    <div class="col-lg-4" style="">
+
+      <article class="profile comh4 opa0">
+        <article class="profileList forWeb">
+          <ul style="padding-left: 0px">
+          
+            <li class="s2"> 
+              <div style="padding-top: 10px; padding-bottom: 10px; text-align: left;margin-left: 0px;">
+                <!-- 15  -->
+
+                <p style="font-size:27px; color:#dcb789">Shawn Medez</p>
+                <br> 
+              </div>
+            </li>
+          </ul>
+        </article>
+      </article>
+    </div>
+
+    <div class="col-lg-4" style="">
+
+      <article class="profile comh4 opa0">
+        <article class="profileList forWeb">
+          <ul>
+
+            <li class="s2">
+              <div style="padding-top: 10px; padding-bottom: 10px;">
+                <!-- 15  -->
+
+                <p style="font-size:32px; color:greenyellow">Ready</p>
+                <br> 
+              </div>
+            </li>
+          </ul>
+        </article>
+      </article>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+
+
+
+
+ 
+
+</body>
+
+<Script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></Script>
+
+<script>
+    var inveSet;
+        var currentChk;
+        var count;
+        var cntEffect = Power1.easeOut;
+        var cntStart = -847;
+        var cntDue = 1.5;
+
+        inveSet = function () {
+            //countInit
+            TweenMax.to(".nb11", 0, { y: cntStart });
+            TweenMax.to(".nb12", 0, { y: cntStart });
+            TweenMax.to(".nb13", 0, { y: cntStart });
+            TweenMax.to(".nb14", 0, { y: cntStart });
+
+            TweenMax.to(".nb21", 0, { y: cntStart });
+            TweenMax.to(".nb22", 0, { y: cntStart });
+        };
+
+        count = function () {
+            new TweenMax.to(".nb11", 1.7, { y: -169, ease: cntEffect });
+            new TweenMax.to(".nb12", 1.7, { y: -13, ease: cntEffect }).delay(0.1);
+            new TweenMax.to(".nb13", 1.7, { y: -13, ease: cntEffect }).delay(0.2);
+            new TweenMax.to(".nb14", 1.7, { y: -13, ease: cntEffect }).delay(0.3);
+
+            new TweenMax.to(".nb21", cntDue, { y: -169, ease: cntEffect }).delay(0.4);
+            new TweenMax.to(".nb22", cntDue, { y: -471, ease: cntEffect }).delay(0.5);
+        };
+
+        inveSet();
+        count();
+
+</script>
+</html>

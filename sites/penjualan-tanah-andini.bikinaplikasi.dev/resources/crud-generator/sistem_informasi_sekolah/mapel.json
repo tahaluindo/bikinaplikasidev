@@ -1,0 +1,18 @@
+{
+    "fields": [
+        {
+            "name": "nama",
+            "type": "string"
+        }
+    ],
+    "foreign_keys": [
+    ],
+    "relationships": [
+    ],
+    "validations": [
+        {
+            "field": "nama",
+            "rules": "required|max:30"
+        }
+    ]
+}

@@ -1,0 +1,60 @@
+{
+    "fields": [
+        {
+            "name": "pelanggan_id",
+            "type": "select",
+            "options": [
+                {
+                    "$id": "$nama"
+                }
+            ]
+        },
+        {
+            "name": "penjualan_id",
+            "type": "select",
+            "options": [
+                {
+                    "$id": "$nama"
+                }
+            ]
+        },
+        {
+            "name": "angsuran_ke",
+            "type": "integer"
+        },
+        {
+            "name": "jumlah",
+            "type": "integer"
+        },
+        {
+            "name": "tanggal",
+            "type": "date"
+        }
+    ],
+    "foreign_keys": [
+    ],
+    "relationships": [
+    ],
+    "validations": [
+        {
+            "field": "pelanggan_id",
+            "rules": "required|exists:pelanggan,id"
+        },
+        {
+            "field": "penjualan_id",
+            "rules": "required|exists:penjualan,id"
+        },
+        {
+            "field": "angsuran_ke",
+            "rules": "required"
+        },
+        {
+            "field": "jumlah",
+            "rules": "required"
+        },
+        {
+            "field": "tanggal",
+            "rules": "required|date"
+        }
+    ]
+}

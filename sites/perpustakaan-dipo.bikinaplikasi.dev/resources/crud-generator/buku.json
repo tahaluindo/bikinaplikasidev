@@ -1,0 +1,75 @@
+{
+    "fields": [{
+            "name": "kode_buku",
+            "type": "select",
+            "options":{
+                "{{ $rak->id }}" : "{{ $rak->id }}"
+            }
+        },{
+            "name": "judul",
+            "type": "varchar"
+        },
+        {
+            "name": "penulis",
+            "type": "varchar"
+        },
+        {
+            "name": "penerbit",
+            "type": "varchar"
+        },
+        {
+            "name": "tahun",
+            "type": "number"
+        },
+        {
+            "name": "kota",
+            "type": "varchar"
+        },
+        {
+            "name": "stok",
+            "type": "number"
+        },
+        {
+            "name": "ditambahkan",
+            "type": "varchar"
+        }
+    ],
+
+    "foreign_keys": [{
+        "column": "kode_buku",
+        "references": "id",
+        "on": "rak",
+        "onDelete": "cascade"
+    }],
+    "relationships": [{
+        "name": "kode_buku",
+        "type": "belongsTo",
+        "class": "App\\Models\\Rak"
+    }],
+
+    "validations": [{
+        "field": "kode_buku",
+        "rules": "required|exists:rak,id"
+    }, {
+        "field": "judul",
+        "rules": "required|varchar|max:100"
+    }, {
+        "field": "penulis",
+        "rules": "required|varchar|max:30"
+    }, {
+        "field": "penerbit",
+        "rules": "required|varchar|max:30"
+    }, {
+        "field": "tahun",
+        "rules": "required|number|max:4"
+    }, {
+        "field": "kota",
+        "rules": "required|varchar|max:30"
+    }, {
+        "field": "stok",
+        "rules": "required|number|max:255"
+    }, {
+        "field": "ditambahkan",
+        "rules": "required|varchar|max:12"
+    }]
+}

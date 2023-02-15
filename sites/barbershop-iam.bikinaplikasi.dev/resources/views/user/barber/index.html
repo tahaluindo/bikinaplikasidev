@@ -1,0 +1,90 @@
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3" style="background-image:linear-gradient(180deg, #C29A6B 0%, #886E4F 100%);
+              box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(233 159 30 / 40%) !important;">
+                        <h6 class="text-white text-capitalize ps-3 text-center"
+                            style="display: inline-block; width: auto">Barber table</h6>
+
+                        <!--                        <a class="btn btn-primary" href="/user/barber/create">+Tambah</a>-->
+                    </div>
+                </div>
+                <div class="card-body px-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    Barber
+                                </th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                    Pemilik
+                                </th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    Link
+                                </th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    Action
+                                </th>
+                                <th class="text-secondary opacity-7"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <% barber.forEach(function(item) { %>
+                            <tr>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div>
+                                            <img src="/<%- item.dataValues.user.dataValues.foto %>"
+                                                 class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">
+                                                <strong><%- item.dataValues.user.dataValues.nama %></strong>
+                                            </h6>
+                                            <p class="text-xs text-secondary mb-0"><%-
+                                                item.dataValues.user.dataValues.email %></p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <h6 class="mb-0 text-sm">
+                                            <strong><%- item.dataValues.pemilik %></strong>
+                                        </h6>
+                                        <p class="text-xs text-secondary mb-0"><%- item.dataValues.user.dataValues.no_hp
+                                            %></p>
+                                    </div>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <span class="text-secondary text-xs font-weight-bold"><%- item.dataValues.link %></span>
+                                </td>
+                                <td class="align-middle" style="text-align: center">
+
+                                    <a href="/user/barber/<%- item.dataValues.id %>/edit"
+                                       class="text-secondary font-weight-bold text-xs"
+                                       data-toggle="tooltip" data-original-title="Edit user">
+                                        Edit
+                                    </a>
+                                    &nbsp;
+                                    <a href="/user/barber/<%- item.dataValues.id %>/destroy"
+                                       class="text-secondary font-weight-bold text-xs"
+                                       data-toggle="tooltip"
+                                       onclick="return confirm('Yakin akan menghapus data ini?')"
+                                       data-original-title="Edit user">
+                                        Hapus
+                                    </a>
+                                </td>
+                            </tr>
+                            <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

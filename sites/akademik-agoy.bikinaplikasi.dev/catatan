@@ -1,0 +1,42 @@
+// cara menjalankan program untuk pertama kali
+- jalankan xampp
+- start service apache & mysql
+- buka link localhost/phpmyadmin & buat database bernama nurina_bikinaplikasi_dev
+- kalo nama databaseny mau dibedain gpp, asal di file .env di sesuaikan dngn nama database yg dibuat
+- setelah dibuat langsung klik tab import, chose file, kemudian cari file databaseny (nurina_bikinaplikasi_dev.sql di folder program)
+- langsung go saja abaikan yg lain
+- copas program ke folder htdocs di tempat penginstalan xampp, biasany di c:/xampp/htdocs
+- buka link localhost/nama-folder-program dibrowser
+- selesai
+
+// cara jalanin program klo dah pernah import database
+- jalankan xampp
+- start service apache & mysql
+- buka link localhost/nama-folder-program dibrowser
+
+// alternatif jalanin program
+- jalankan xampp
+- start service apache & mysql
+- di folder program tekan shift + klik kanan
+- open terminal / powershell here
+- ketik php artisan ser
+- buka di browser sesuai port yg jalan, biasany 8000 jadi ketik localhost:8000
+
+// kalo mau buka source code ny
+- jalankan sublime / vs code
+- klik file, open folder
+- pilih folder program
+- open
+
+// kalo ada error
+- catat semua kejadian error & screen shoot ny jangan lupa
+- wa ke aku (Ramdan)
+
+// kalo ada permintaan fiture
+- catat fiture ap yg diminta, klo krang jelas cobak digambar dikertas & foto aj
+- wa ke aku (Ramdan)
+
+// catatan
+- database online dan offline beda isiny
+- kalo mau sinkron brrti hapus isi file .env, lalu copy isi file .env.example pastekan ke file .env
+- jika program di berikan / dijual ke orang lain (bukan object yg berkaitan dgn kp/skripsi client) maka tidak bisa saya perbaiki lagi dngn gratis

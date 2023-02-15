@@ -1,0 +1,14 @@
+{
+    "fields": [
+        {
+            "name": "nama",
+            "type": "string"
+        }
+    ],
+    "validations": [
+        {
+            "field": "nama",
+            "rules": "required"
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+{
+    "fields": [
+        {
+            "name": "barang_id",
+            "type": "select",
+            "options": {
+                "Ketua": "Ketua"
+            }
+        },
+        {
+            "name": "jumlah",
+            "type": "integer"
+        },
+        {
+            "name": "harga",
+            "type": "integer"
+        },
+        {
+            "name": "total",
+            "type": "integer"
+        },
+        {
+            "name": "tanggal",
+            "type": "date"
+        }
+    ],
+    "validations": [
+        {
+            "field": "barang_id",
+            "rules": "required|exists:jenis,id"
+        },
+        {
+            "field": "jumlah",
+            "rules": "required"
+        },
+        {
+            "field": "harga",
+            "rules": "required"
+        },
+        {
+            "field": "total",
+            "rules": "required"
+        },
+        {
+            "field": "tanggal",
+            "rules": "required|date"
+        }
+    ]
+}

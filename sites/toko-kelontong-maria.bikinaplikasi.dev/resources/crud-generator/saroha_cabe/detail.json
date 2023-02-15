@@ -1,0 +1,47 @@
+{
+    "fields": [
+        {
+            "name": "nama",
+            "type": "integer"
+        }, {
+            "name": "harga",
+            "type": "integer"
+        }, {
+            "name": "total",
+            "type": "integer"
+        }, {
+            "name": "metode",
+            "type": "select",
+            "options": [
+                {
+                    "Kas" : "Kas"
+                }, 
+                {
+                    "Kredit" : "Kredit"
+                }
+            ]
+        }
+    ],
+    "foreign_keys": [
+    ],
+    "relationships": [
+    ],
+    "validations": [
+        {
+            "field": "produk",
+            "rules": "required|exists:produk,id"
+        }, {
+            "field": "jumlah",
+            "rules": "required|min:1"
+        }, {
+            "field": "harga",
+            "rules": "required|min:1"
+        }, {
+            "field": "total",
+            "rules": "required|min:1"
+        }, {
+            "field": "metode",
+            "rules": "required|in:Kas,Kredit"
+        }
+    ]
+}

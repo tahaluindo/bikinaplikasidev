@@ -1,0 +1,30 @@
+{
+    "fields": [{
+            "name": "pesanan_id",
+            "type": "select",
+            "options": [{
+                "$pesanan->id": "$pesanan->nama"
+            }]
+        }, {
+            "name": "menu_id",
+            "type": "select",
+            "options": [{
+                "$menu->id": "$menu->nama"
+            }]
+        }, {
+            "name": "jumlah",
+            "type": "integer"
+        }, {
+            "name": "harga",
+            "type": "integer"
+        }, {
+            "name": "total",
+            "type": "integer"
+        }
+    ],
+
+    "foreign_keys": [],
+    "relationships": [],
+
+    "validations": []
+}

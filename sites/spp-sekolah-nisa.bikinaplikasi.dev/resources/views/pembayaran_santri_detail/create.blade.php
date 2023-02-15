@@ -1,0 +1,228 @@
+@extends("layouts.matrix-admin.app")
+
+@section("content")
+<div class="page-wrapper">
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h4 class="page-title">Pembayaran Santri Detail ({{ $pembayaranSantri->keterangan }})</h4>
+                <div class="ml-auto text-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Home</a></li>
+                            <li class="breadcrumb-item">Pembayaran Santri</li>
+                            <li class="breadcrumb-item active" aria-current="page">Tambah</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-body">
+                        <form class="form-horizontal form-material"
+                            action="{{ url(route('pembayaran_santri_detail.store', ['pembayaran_santri' => $pembayaranSantri->id])) }}"
+                            method="post" enctype="multipart/form-data" id='form_pembayaran_santri_detail_create'>
+                            @csrf
+
+                            <div class="form-group">
+                                <label class="col-md-12">User</label>
+                                <div class="col-md-12">
+                                    <input type="text"
+                                        class="form-control form-control-line @error('tags') is-invalid @enderror"
+                                        value='{{ old('tags') }}' name='tags' id='tags' required
+                                        placeholder="cari user...">
+
+                                    <input id="user_id" name='user_id' type='hidden' value="{{ old('user_id') }}">
+                                    @error('user_id')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-12">Bulan Pembayaran</label>
+                                <div class="col-md-12">
+                                    @foreach($pembayaran_santri_bulans as $index => $pembayaran_santri_bulan)
+                                    <div class="form-check form-check-inline">
+                                        <label class="form-check-label">
+                                            <input
+                                                class="form-check-input @error('pembayaran_santri_bulan') is-invalid @enderror"
+                                                type="checkbox" id="inlineCheckbox-{{ $pembayaran_santri_bulan->id }}"
+                                                value="{{ $pembayaran_santri_bulan->id }}"
+                                                @if(in_array($pembayaran_santri_bulan->id,
+                                            old("pembayaran_santri_bulans") ?? []))
+                                            checked @endif name="pembayaran_santri_bulans[]">
+                                            {{ $pembayaran_santri_bulan->nama }}
+                                        </label>
+                                    </div>
+                                    @endforeach
+
+                                    @error('pembayaran_santri_bulan.*')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-12">Nominal Spp Dibayar (Perbulan)</label>
+                                <div class="col-md-12">
+                                    <input id='nominal_spp_dibayar' type="number" placeholder="100000"
+                                        class="form-control form-control-line @error('nominal_spp_dibayar') is-invalid @enderror"
+                                        value='{{ old('nominal_spp_dibayar') == "" ? $pembayaranSantri->nominal_spp_default : old('nominal_spp_dibayar') }}'
+                                        name='nominal_spp_dibayar' readonly
+                                        data-nominal-spp-default='{{ $pembayaranSantri->nominal_spp_default }}'>
+
+                                    @error('nominal_spp_dibayar')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-12">Nominal Uang Makan Dibayar (Perbulan)</label>
+                                <div class="col-md-12">
+                                    <input id='nominal_uang_makan_dibayar' type="number" placeholder="100000"
+                                        class="form-control form-control-line @error('nominal_uang_makan_dibayar') is-invalid @enderror"
+                                        value='{{ old('nominal_uang_makan_dibayar') == "" ? $pembayaranSantri->nominal_uang_makan_default : old('nominal_uang_makan_dibayar') }}'
+                                        name='nominal_uang_makan_dibayar'
+                                        data-nominal-uang-makan-default='{{ $pembayaranSantri->nominal_uang_makan_default }}'
+                                        readonly>
+
+                                    @error('nominal_uang_makan_dibayar')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-12">Nominal Belum Dibayar (Perbulan)</label>
+                                <div class="col-md-12">
+                                    <input id='nominal_belum_dibayar' type="number" placeholder="0"
+                                        class="form-control form-control-line @error('nominal_belum_dibayar') is-invalid @enderror"
+                                        value='{{ old('nominal_belum_dibayar') == "" ? 0 : old('nominal_belum_dibayar')  }}'
+                                        name='nominal_belum_dibayar'>
+
+                                    @error('nominal_belum_dibayar')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            {{-- <div class="form-group">
+                                <label class="col-md-12">Total</label>
+                                <div class="col-md-12">
+                                    <input id='total' type="number" placeholder="0"
+                                        class="form-control form-control-line @error('total') is-invalid @enderror"
+                                        value='{{ old('total') == "" ? 0 : old('total')  }}'
+                                        name='total'>
+
+                                    @error('total')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div> --}}
+
+                            <div class="form-group">
+                                <label class="col-md-12">Potongan (% Perbulan)</label>
+                                <div class="col-md-12">
+                                    <select class="form-control form-control-line" name='potongan' id='potongan'>
+                                        <option value="0" @if(old('potongan')==0) selected @endif>
+                                            0%</option>
+                                        <option value="25" @if(old('potongan')==25) selected @endif>
+                                            25%</option>
+                                        <option value="50" @if(old('potongan')==50) selected @endif>
+                                            50%</option>
+                                        {{--  <option value="75" @if(old('potongan')==75) selected @endif>
+                                            75%</option>  --}}
+                                    </select>
+
+                                    @error('potongan')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-12">Status</label>
+                                <div class="col-md-12">
+                                    <select class="form-control form-control-line" name='status' id='status'>
+                                        @foreach($statuss as $status)
+                                        <option value="{{ $status }}" @if(old('status')==$status) selected @endif>
+                                            {{ $status }}</option>
+                                        @endforeach
+                                    </select>
+
+                                    @error('status')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-12">Tanggal Bayar</label>
+                                <div class="col-md-12">
+                                    <input type="text"
+                                        class="flatpickr form-control form-control-line @error('tanggal_bayar') is-invalid @enderror"
+                                        value='{{ old('tanggal_bayar') == "" ? date('Y-m-d') : old('tanggal_bayar') }}'
+                                        name='tanggal_bayar' id='tanggal_bayar'>
+
+                                    @error('tanggal_bayar')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-12">Catatan (Tidak Wajib)</label>
+                                <div class="col-md-12">
+                                    <textarea id='editor-1' style="height: 130px !important;"
+                                        class="form-control form-control-line @error('catatan') is-invalid @enderror"
+                                        name='catatan'>{{ old('catatan') }}</textarea>
+
+                                    @error('catatan')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <button class="btn btn-success" type="submit" id='submit'>Simpan</button>
+                                    <button class="btn btn-info" type="submit" name='cetak_kwitansi' id='cetak_kwitansi' value='cetak_kwitansi'>Cetak Kwitansi</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endsection

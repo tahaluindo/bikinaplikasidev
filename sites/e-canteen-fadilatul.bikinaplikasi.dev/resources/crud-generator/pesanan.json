@@ -1,0 +1,30 @@
+{
+    "fields": [{
+            "name": "user_id",
+            "type": "select",
+            "options": [{
+                "$user->id": "$user->nama"
+            }]
+        }, {
+            "name": "deskripsi",
+            "type": "text"
+        }, {
+            "name": "gambar_depan",
+            "type": "file"
+        }
+    ],
+
+    "foreign_keys": [],
+    "relationships": [],
+
+    "validations": [{
+        "field": "user_id",
+        "rules": "required|exists:user,id"
+    }, {
+        "field": "deskripsi",
+        "rules": "required"
+    }, {
+        "field": "gambar_depan",
+        "rules": "required|image"
+    }]
+}

@@ -1,0 +1,29 @@
+# FROM node:16
+# WORKDIR /usr/src/app
+# COPY package*.json ./
+# RUN npm install
+# EXPOSE 8080
+# COPY . .
+# CMD [ "node", "server.js" ]
+
+FROM mariadb:10.5.9
+COPY ./data/db /var/lib/mysql
+EXPOSE 3306
+ENV MYSQL_ROOT_PASSWORD=M@utauaja982
+
+FROM phpmyadmin
+EXPOSE 80 443
+ENV PMA_ARBITRARY=1
+ENV UPLOAD_LIMIT=300M
+
+FROM composer
+COPY ./sites /app
+COPY ./lsws/bash /home
+ENTRYPOINT [ "/bin/sh", "/home/composer-install.bash"]
+
+
+FROM composer
+COPY ./sites /app
+COPY ./lsws/bash /home
+ENTRYPOINT [ "/bin/sh", "/home/composer-install.bash"]
+

@@ -1,0 +1,491 @@
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-0">
+                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3" style="background-image:linear-gradient(180deg, #C29A6B 0%, #886E4F 100%);
+              box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(233 159 30 / 40%) !important;">
+                        <h6 class="text-white text-capitalize ps-3">Member table</h6>
+                    </div>
+
+
+                    <div class="row card-body px-0 pb-2" style="margin-left:20px">
+                        <div class="col-md-6" style=" ">
+                            <span>Show</span>
+                            <select class="custom-select" id="inputGroupSelect03" style="width:10%"
+                                    aria-label="Example select with button addon">
+                                <option selected>10</option>
+                                <option value="1">10</option>
+                                <option value="2">20</option>
+                                <option value="3">30</option>
+                            </select> Enteries
+                        </div>
+                        <div class="row col-md-6">
+                            <div class="col-md-3">
+                                <select class="custom-select" id="inputGroupSelect03" style="width:100%"
+                                        aria-label="Example select with button addon">
+                                    <option selected>Pilih Berdasarkan</option>
+                                    <option value="1">Nama</option>
+                                    <option value="2">Jabatan</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input-group mb-3">
+                                    <input type="text"
+                                           style="border: 1px solid #d2d6da !important; height:fit-content"
+                                           class="form-control"
+                                           placeholder="  Cari Apa?" aria-label=" Searcg"
+                                           aria-describedby="button-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                                            Cari
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <form action="tambah_member.html">
+                                    <button class="btn btn-primary"
+                                            style="background-image :#1e9ce9;background:#1e9ce9; box-shadow: 0 3px 3px 0 rgb(30 213 233 / 15%), 0 3px 1px -2px rgb(30 233 204 / 20%), 0 1px 5px 0 rgb(30 233 225 / 15%); border-radius:100%; font-size: 20px; color:white">
+                                        <h1 style="color:white">+</h1>
+                                    </button>
+                                </form>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="card-body px-0 pb-2" style="z-index: 0 !important;">
+                    <div class="table-responsive p-0" style="z-index: 0 !important;">
+                        <table class="table align-items-center mb-0">
+                            <thead>
+                            <tr>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    Nama
+                                </th>
+                                <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                                    Member
+                                </th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    Aktivitas
+                                </th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    Last Login
+                                </th>
+                                <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                                    Action
+                                </th>
+                                <th class="text-secondary opacity-7"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <% member.forEach(function(item) { %>
+                            <tr>
+                                <td>
+                                    <div class="d-flex px-2 py-1">
+                                        <div>
+                                            <img src="/<%- item.dataValues.user.dataValues.foto %>"
+                                                 class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
+                                        </div>
+                                        <div class="d-flex flex-column justify-content-center">
+                                            <h6 class="mb-0 text-sm">
+                                                <strong><%- item.dataValues.user.dataValues.nama %></strong>
+                                            </h6>
+                                            <p class="text-xs text-secondary mb-0"><%-
+                                                item.dataValues.user.dataValues.email %></p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <h6 class="mb-0 text-sm">
+                                            <strong><%- item.dataValues.type %></strong>
+                                        </h6>
+                                        <p class="text-xs text-secondary mb-0"><%-
+                                            item.dataValues.barber.dataValues.user.dataValues.nama %></p>
+                                    </div>
+                                </td>
+                                <td class="align-middle text-center text-sm">
+                                    <a href="#0" class="cd-popup-trigger"><span
+                                            class="badge badge-sm bg-gradient-success">Detail</span></a>
+                                </td>
+                                <td class="align-middle text-center">
+                                    <span class="text-secondary text-xs font-weight-bold"><%- (new Date(item.dataValues.user.dataValues.last_login)).toLocaleDateString() %></span>
+                                </td>
+                                <td class="align-middle" style="text-align: center">
+                                    <a href="/user/member/<%- item.dataValues.id %>/edit"
+                                       class="text-secondary font-weight-bold text-xs"
+                                       data-toggle="tooltip" data-original-title="Edit user">
+                                        Edit
+                                    </a>
+                                    &nbsp;
+                                    <a href="/user/member/<%- item.dataValues.id %>/destroy"
+                                       class="text-secondary font-weight-bold text-xs"
+                                       data-toggle="tooltip"
+                                       onclick="return confirm('Yakin akan menghapus data ini?')"
+                                       data-original-title="Edit user">
+                                        Hapus
+                                    </a>
+                                </td>
+                            </tr>
+                            <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <Br>
+                    <Br>
+                    <Br>
+                    <style>
+                        /* [ YEK/SASS - VERSION : 3.1.0 ] */
+                        @import url("https://fonts.googleapis.com/css?family=Montserrat");
+                        @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+                        @import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+                        @import url("https://cdn.jsdelivr.net/npm/yekan-font@1.0.0/css/yekan-font.min.css");
+
+                        .visible-hidden {
+                            visibility: hidden;
+                        }
+
+                        /* YEK/SASS (https://npmjs.com/yek/sass) */
+                        /* __[ FONT'S ]__ */
+                        /* __[ VARIABLE ]__ */
+                        /* __[ :ROOT ]__ */
+                        :root {
+                            --color-primary: #1a2556;
+                            --color-secondary: #a5b3d4;
+                            --color-gray: #dde6f3;
+                            --color-light-gray: #f3f6fb;
+                            --color-white: white;
+                            --color-black: #3e3743;
+                            --color-input-hover: rgba(165, 179, 212, 0.6);
+                            --color-input-focus: rgba(26, 37, 86, 0.45);
+                            --color-input-error: rgba(255, 94, 31, 0.6);
+                            --color-input-warning: rgba(166, 145, 54, 0.6);
+                            --color-input-success: rgba(23, 125, 23, 0.45);
+                            --color-input-disabled: #dde6f3;
+                            --font-family: Roboto, Montserrat, sans-serif;
+                            --font-persian: Yekan, Lalezar, cursive;
+                            --font-proxima: proxima-soft, Proxima Soft, Proxima Nova Soft, Helvetica, Arial, sans-serif;
+                        }
+
+                        /* __[ STYLE ]__ */
+                        *,
+                        *::before,
+                        *::after {
+                            box-sizing: border-box;
+                            transition: 0.2s ease all;
+                        }
+
+                        body,
+                        html {
+                            padding: 0;
+                            margin: 0;
+                            font-family: var(--font-family);
+                        }
+
+                        body {
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                            width: 100vw;
+                            min-height: 100vh;
+                            font-family: var(--font-family);
+                        }
+
+                        .pagination {
+                            width: auto;
+                            height: 60px;
+                            border-radius: 9px;
+                            overflow: hidden;
+                        }
+
+                        .pagination, .pagination__list {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: center;
+                            align-content: center;
+                        }
+
+                        .pagination__list {
+                            list-style-type: none;
+                            padding: 0;
+                            margin: 0;
+                            width: 350;
+                            height: 50px;
+                            border-radius: 9px;
+                            margin: 0 9px;
+                            overflow: hidden;
+                        }
+
+                        .pagination__item {
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: center;
+                            align-content: center;
+                            font-size: 1.1rem;
+                        }
+
+                        .pagination__item > button, .pagination__button {
+                            border: none;
+                            outline: none;
+                            stroke: none;
+                            box-shadow: none;
+                            cursor: pointer;
+                            border-radius: 9px;
+                            background: var(--color-gray);
+                        }
+
+                        .pagination__item > button:hover, .pagination__button:hover {
+                            background: var(--color-secondary);
+                            color: var(--color-primary);
+                        }
+
+                        .pagination__item > button {
+                            width: 45px;
+                            height: 45px;
+                        }
+
+                        .pagination__item > button[data-level=target] {
+                            background: var(--color-primary);
+                            color: var(--color-light-gray);
+                        }
+
+                        .pagination--move-prev {
+                            -webkit-animation: pagination-move-prev 0.5s ease both;
+                            animation: pagination-move-prev 0.5s ease both;
+                        }
+
+                        .pagination--move-next {
+                            -webkit-animation: pagination-move-next 0.5s ease both;
+                            animation: pagination-move-next 0.5s ease both;
+                        }
+
+                        .pagination--move-top {
+                            -webkit-animation: pagination-move-top 0.5s ease both;
+                            animation: pagination-move-top 0.5s ease both;
+                        }
+
+                        .pagination__button {
+                            width: 35px;
+                            height: 35px;
+                        }
+
+                        @-webkit-keyframes pagination-move-prev {
+                            from, 0% {
+                                transform: translateX(25px);
+                            }
+                            50% {
+                                transform: translateX(-5px);
+                            }
+                            to, 100% {
+                                transform: translateX(0px);
+                            }
+                        }
+
+                        @keyframes pagination-move-prev {
+                            from, 0% {
+                                transform: translateX(25px);
+                            }
+                            50% {
+                                transform: translateX(-5px);
+                            }
+                            to, 100% {
+                                transform: translateX(0px);
+                            }
+                        }
+
+                        @-webkit-keyframes pagination-move-next {
+                            from, 0% {
+                                transform: translateX(-25px);
+                            }
+                            50% {
+                                transform: translateX(5px);
+                            }
+                            to, 100% {
+                                transform: translateX(0px);
+                            }
+                        }
+
+                        @keyframes pagination-move-next {
+                            from, 0% {
+                                transform: translateX(-25px);
+                            }
+                            50% {
+                                transform: translateX(5px);
+                            }
+                            to, 100% {
+                                transform: translateX(0px);
+                            }
+                        }
+
+                        @-webkit-keyframes pagination-move-top {
+                            from, 0% {
+                                transform: translateY(-25px);
+                            }
+                            50% {
+                                transform: translateY(10px);
+                            }
+                            to, 100% {
+                                transform: translateY(0px);
+                            }
+                        }
+
+                        @keyframes pagination-move-top {
+                            from, 0% {
+                                transform: translateY(-25px);
+                            }
+                            50% {
+                                transform: translateY(10px);
+                            }
+                            to, 100% {
+                                transform: translateY(0px);
+                            }
+                        }
+                    </style>
+
+
+                    <section class="pagination">
+                        <button id="pg-button-prev" type="button" class="pagination__button">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+
+                        <ul class="pagination__list">
+                            <li class="pagination__item pagination__item--1">
+                                <button id="pg-button-1" type="button">1</button>
+                            </li>
+                            <li class="pagination__item pagination__item--2">
+                                <button id="pg-button-2" type="button">2</button>
+                            </li>
+                            <li class="pagination__item pagination__item--3">
+                                <button id="pg-button-3" type="button">3</button>
+                            </li>
+                            <li class="pagination__item pagination__item--4">
+                                <button id="pg-button-4" type="button">4</button>
+                            </li>
+                            <li class="pagination__item pagination__item--5">
+                                <button id="pg-button-5" type="button">5</button>
+                            </li>
+                        </ul>
+
+                        <button id="pg-button-next" type="button" class="pagination__button">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <div class="cd-popup" role="alert" style="z-index: 20;">
+        <div class="cd-popup-container"
+             style="width:100%; max-width:800px; z-index:20;overflow: auto; height:500px">
+            <div class="card">
+                <div class="card-header pb-0 px-3">
+                    <h6 class="mb-0">Transaction Information</h6>
+                </div>
+                <div class="card-body pt-4 p-3">
+                    <ul class="list-group">
+                        <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
+                            <div class="d-flex flex-column">
+                                <h6 class="mb-3 text-sm">AfterSchool Barber</h6>
+                                <span class="mb-2 text-xs">Barang: <span
+                                        class="text-dark font-weight-bold ms-sm-2">Viking
+                                                                        Shampo, Conditioner</span></span>
+                                <span class="mb-2 text-xs">Harga: <span
+                                        class="text-dark ms-sm-2 font-weight-bold">Rp. 920.000</span></span>
+                                <span class="text-xs">Kode Transaksi: <span
+                                        class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
+                            </div>
+                            <div class="ms-auto text-end">
+                                <a class="btn btn-link text-danger text-gradient px-3 mb-0"
+                                   href="javascript:;"><i
+                                        class="material-icons text-sm me-2">delete</i>Delete</a>
+                                <a class="btn btn-link text-dark px-3 mb-0"
+                                   href="javascript:;"><i
+                                        class="material-icons text-sm me-2">edit</i>Edit</a>
+                            </div>
+                        </li>
+                        <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
+                            <div class="d-flex flex-column">
+                                <h6 class="mb-3 text-sm">Lucas Harper</h6>
+                                <span class="mb-2 text-xs">Company Name: <span
+                                        class="text-dark font-weight-bold ms-sm-2">Stone Tech
+                                                                        Zone</span></span>
+                                <span class="mb-2 text-xs">Email Address: <span
+                                        class="text-dark ms-sm-2 font-weight-bold">lucas@stone-tech.com</span></span>
+                                <span class="text-xs">VAT Number: <span
+                                        class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
+                            </div>
+                            <div class="ms-auto text-end">
+                                <a class="btn btn-link text-danger text-gradient px-3 mb-0"
+                                   href="javascript:;"><i
+                                        class="material-icons text-sm me-2">delete</i>Delete</a>
+                                <a class="btn btn-link text-dark px-3 mb-0"
+                                   href="javascript:;"><i
+                                        class="material-icons text-sm me-2">edit</i>Edit</a>
+                            </div>
+                        </li>
+                        <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
+                            <div class="d-flex flex-column">
+                                <h6 class="mb-3 text-sm">Ethan James</h6>
+                                <span class="mb-2 text-xs">Company Name: <span
+                                        class="text-dark font-weight-bold ms-sm-2">Fiber
+                                                                        Notion</span></span>
+                                <span class="mb-2 text-xs">Email Address: <span
+                                        class="text-dark ms-sm-2 font-weight-bold">ethan@fiber.com</span></span>
+                                <span class="text-xs">VAT Number: <span
+                                        class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
+                            </div>
+                            <div class="ms-auto text-end">
+                                <a class="btn btn-link text-danger text-gradient px-3 mb-0"
+                                   href="javascript:;"><i
+                                        class="material-icons text-sm me-2">delete</i>Delete</a>
+                                <a class="btn btn-link text-dark px-3 mb-0"
+                                   href="javascript:;"><i
+                                        class="material-icons text-sm me-2">edit</i>Edit</a>
+                            </div>
+                        </li>
+                        <li class="list-group-item border-0 d-flex p-4 mb-2 mt-3 bg-gray-100 border-radius-lg">
+                            <div class="d-flex flex-column">
+                                <h6 class="mb-3 text-sm">Ethan James</h6>
+                                <span class="mb-2 text-xs">Company Name: <span
+                                        class="text-dark font-weight-bold ms-sm-2">Fiber
+                                                                        Notion</span></span>
+                                <span class="mb-2 text-xs">Email Address: <span
+                                        class="text-dark ms-sm-2 font-weight-bold">ethan@fiber.com</span></span>
+                                <span class="text-xs">VAT Number: <span
+                                        class="text-dark ms-sm-2 font-weight-bold">FRB1235476</span></span>
+                            </div>
+                            <div class="ms-auto text-end">
+                                <a class="btn btn-link text-danger text-gradient px-3 mb-0"
+                                   href="javascript:;"><i
+                                        class="material-icons text-sm me-2">delete</i>Delete</a>
+                                <a class="btn btn-link text-dark px-3 mb-0"
+                                   href="javascript:;"><i
+                                        class="material-icons text-sm me-2">edit</i>Edit</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <a href="#0" class="cd-popup-close img-replace">Close</a>
+        </div> <!-- cd-popup-container -->
+    </div>
+
+
+</div>

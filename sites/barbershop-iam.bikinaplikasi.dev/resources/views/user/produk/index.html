@@ -1,0 +1,476 @@
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-12">
+            <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3" style="background-image:linear-gradient(180deg, #C29A6B 0%, #886E4F 100%);
+              box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(233 159 30 / 40%) !important;">
+                        <h6 class="text-white text-capitalize ps-3">Transaksi Service Tabel</h6>
+                    </div>
+                </div>
+
+                <div class="row card-body px-0 pb-2" style="margin-left:20px">
+                    <div class="col-md-6" style=" ">
+                        <span>Show</span>
+                        <select class="custom-select" id="inputGroupSelect03" style="width:10%"
+                                aria-label="Example select with button addon">
+                            <option selected>10</option>
+                            <option value="1">10</option>
+                            <option value="2">20</option>
+                            <option value="3">30</option>
+                        </select> Enteries
+                    </div>
+                    <div class="row col-md-6">
+                        <div class="col-md-3">
+                            <select class="custom-select" id="inputGroupSelect03" style="width:100%"
+                                    aria-label="Example select with button addon">
+                                <option selected>Pilih Berdasarkan</option>
+                                <option value="1">Jenis Service</option>
+                                <option value="1">Kode Transaksi</option>
+                                <option value="2">Tanggal</option>
+                                <option value="3">Resi</option>
+                                <option value="4">Status</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group mb-3">
+                                <input type="text" style="border: 1px solid #d2d6da !important; height:fit-content"
+                                       class="form-control" placeholder="  Cari Apa?" aria-label=" Searcg"
+                                       aria-describedby="button-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">
+                                        Cari
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <form action="/user/produk/create">
+                                <button class="btn btn-primary"
+                                        style="background-image :#1e9ce9;background:#1e9ce9; box-shadow: 0 3px 3px 0 rgb(30 213 233 / 15%), 0 3px 1px -2px rgb(30 233 204 / 20%), 0 1px 5px 0 rgb(30 233 225 / 15%); border-radius:100%; font-size: 20px; color:white">
+                                    <h1 style="color:white">+</h1></button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <Style>
+                    .checked {
+                        color: orange;
+                    }
+
+                    .wrapper {
+                        height: 265px;
+                        width: 600px;
+                        margin: 50px auto;
+                        border-radius: 7px 7px 7px 7px;
+                        /* VIA CSS MATIC https://goo.gl/cIbnS */
+                        -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+                        -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+                        box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+                    }
+
+                    .product-img {
+                        float: left;
+                        height: 420px;
+                        width: 327px;
+                    }
+
+                    .product-img img {
+                        border-radius: 7px 0 0 7px;
+                    }
+
+                    .product-info {
+                        float: left;
+                        height: auto;
+                        width: 327px;
+                        border-radius: 0 7px 10px 7px;
+                        background-color: #ffffff;
+                    }
+
+                    .product-text {
+                        height: 300px;
+                        width: 327px;
+                    }
+
+                    .product-text h1 {
+                        margin: 0 0 0 38px;
+                        padding-top: 52px;
+                        font-size: 34px;
+                        color: #474747;
+                    }
+
+
+                    .product-price-btn {
+                        height: 103px;
+                        width: 327px;
+                        margin-top: 17px;
+                        position: relative;
+                    }
+
+
+                    .product-price-btn button {
+                        float: right;
+                        display: inline-block;
+                        height: 50px;
+                        width: 176px;
+                        margin: 0 40px 0 16px;
+                        box-sizing: border-box;
+                        border: transparent;
+                        border-radius: 60px;
+                        font-family: "Raleway", sans-serif;
+                        font-size: 14px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        letter-spacing: 0.2em;
+                        color: #ffffff;
+                        background-color: #9cebd5;
+                        cursor: pointer;
+                        outline: none;
+                    }
+
+                    .product-price-btn button:hover {
+                        background-color: #79b0a1;
+                    }
+
+                </Style>
+
+                <div class="card-body px-0 pb-2">
+
+                    <div class="row">
+
+
+                        <% produk.forEach(function(item) { %>
+                        <div class="col-md-6">
+
+                            <div class="wrapper">
+                                <div class="product-img" style="width:200px;">
+                                    <img src="/<%- item.dataValues.gambar %>" width="200px" height="200">
+                                </div>
+                                <div class="product-info">
+                                    <div class="product-text" style="height:150px">
+                                        <h1 style="padding-top:10px"><%- item.dataValues.nama %></h1>
+
+                                        <p style="margin:0 0 0 38px"><b><%- item.dataValues.kategori.dataValues.nama
+                                            %></b></p>
+                                        <p style="margin:0 0 0 38px">
+                                        <p style="font-size:20px;margin:0 0 0 38px"><span>
+                                <link rel="stylesheet"
+                                      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                                        <% for(let i = 0; i < item.dataValues.rating; i++) { %>
+                                            <span class="fa fa-star checked"></span>
+                                        <% } %>
+                              </span></p>
+
+                                        <p style="margin:0 0 0 38px"><%- item.dataValues.keterangan %></p>
+
+                                    </div>
+
+                                    <h4 STYLE="width:auto; margin:0 0 0 38px"><%- item.dataValues.harga %></h4>
+                                    <div class="product-price-btn" style="height:50px">
+
+                                        <a href="/user/produk/<%- item.dataValues.id %>/edit" type="button" style="width:100px">Edit</a>
+                                        <a href="/user/produk/<%- item.dataValues.id %>/destroy" style="width:100px" onclick="return confirm('Yakin akan menghapus data ini?')">Hapus</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <% }) %>
+
+                    </div>
+
+
+                    <Br>
+                    <Br>
+                    <Br>
+                    <style>
+                        /* [ YEK/SASS - VERSION : 3.1.0 ] */
+                        @import url("https://fonts.googleapis.com/css?family=Montserrat");
+                        @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+                        @import url("https://fonts.googleapis.com/css2?family=Lalezar&display=swap");
+                        @import url("https://cdn.jsdelivr.net/npm/yekan-font@1.0.0/css/yekan-font.min.css");
+
+                        .visible-hidden {
+                            visibility: hidden;
+                        }
+
+                        /* YEK/SASS (https://npmjs.com/yek/sass) */
+                        /* __[ FONT'S ]__ */
+                        /* __[ VARIABLE ]__ */
+                        /* __[ :ROOT ]__ */
+                        :root {
+                            --color-primary: #1a2556;
+                            --color-secondary: #a5b3d4;
+                            --color-gray: #dde6f3;
+                            --color-light-gray: #f3f6fb;
+                            --color-white: white;
+                            --color-black: #3e3743;
+                            --color-input-hover: rgba(165, 179, 212, 0.6);
+                            --color-input-focus: rgba(26, 37, 86, 0.45);
+                            --color-input-error: rgba(255, 94, 31, 0.6);
+                            --color-input-warning: rgba(166, 145, 54, 0.6);
+                            --color-input-success: rgba(23, 125, 23, 0.45);
+                            --color-input-disabled: #dde6f3;
+                            --font-family: Roboto, Montserrat, sans-serif;
+                            --font-persian: Yekan, Lalezar, cursive;
+                            --font-proxima: proxima-soft, Proxima Soft, Proxima Nova Soft, Helvetica, Arial, sans-serif;
+                        }
+
+                        /* __[ STYLE ]__ */
+                        *,
+                        *::before,
+                        *::after {
+                            box-sizing: border-box;
+                            transition: 0.2s ease all;
+                        }
+
+                        body,
+                        html {
+                            padding: 0;
+                            margin: 0;
+                            font-family: var(--font-family);
+                        }
+
+                        body {
+                            display: flex;
+                            flex-direction: column;
+                            flex-wrap: wrap;
+                            width: 100vw;
+                            min-height: 100vh;
+                            font-family: var(--font-family);
+                        }
+
+                        .pagination {
+                            width: auto;
+                            height: 60px;
+                            border-radius: 9px;
+                            overflow: hidden;
+                        }
+
+                        .pagination,
+                        .pagination__list {
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: center;
+                            align-content: center;
+                        }
+
+                        .pagination__list {
+                            list-style-type: none;
+                            padding: 0;
+                            margin: 0;
+                            width: 350;
+                            height: 50px;
+                            border-radius: 9px;
+                            margin: 0 9px;
+                            overflow: hidden;
+                        }
+
+                        .pagination__item {
+                            width: 50px;
+                            height: 50px;
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            justify-content: center;
+                            align-content: center;
+                            font-size: 1.1rem;
+                        }
+
+                        .pagination__item > button,
+                        .pagination__button {
+                            border: none;
+                            outline: none;
+                            stroke: none;
+                            box-shadow: none;
+                            cursor: pointer;
+                            border-radius: 9px;
+                            background: var(--color-gray);
+                        }
+
+                        .pagination__item > button:hover,
+                        .pagination__button:hover {
+                            background: var(--color-secondary);
+                            color: var(--color-primary);
+                        }
+
+                        .pagination__item > button {
+                            width: 45px;
+                            height: 45px;
+                        }
+
+                        .pagination__item > button[data-level=target] {
+                            background: var(--color-primary);
+                            color: var(--color-light-gray);
+                        }
+
+                        .pagination--move-prev {
+                            -webkit-animation: pagination-move-prev 0.5s ease both;
+                            animation: pagination-move-prev 0.5s ease both;
+                        }
+
+                        .pagination--move-next {
+                            -webkit-animation: pagination-move-next 0.5s ease both;
+                            animation: pagination-move-next 0.5s ease both;
+                        }
+
+                        .pagination--move-top {
+                            -webkit-animation: pagination-move-top 0.5s ease both;
+                            animation: pagination-move-top 0.5s ease both;
+                        }
+
+                        .pagination__button {
+                            width: 35px;
+                            height: 35px;
+                        }
+
+                        @-webkit-keyframes pagination-move-prev {
+
+                            from,
+                            0% {
+                                transform: translateX(25px);
+                            }
+
+                            50% {
+                                transform: translateX(-5px);
+                            }
+
+                            to,
+                            100% {
+                                transform: translateX(0px);
+                            }
+                        }
+
+                        @keyframes pagination-move-prev {
+
+                            from,
+                            0% {
+                                transform: translateX(25px);
+                            }
+
+                            50% {
+                                transform: translateX(-5px);
+                            }
+
+                            to,
+                            100% {
+                                transform: translateX(0px);
+                            }
+                        }
+
+                        @-webkit-keyframes pagination-move-next {
+
+                            from,
+                            0% {
+                                transform: translateX(-25px);
+                            }
+
+                            50% {
+                                transform: translateX(5px);
+                            }
+
+                            to,
+                            100% {
+                                transform: translateX(0px);
+                            }
+                        }
+
+                        @keyframes pagination-move-next {
+
+                            from,
+                            0% {
+                                transform: translateX(-25px);
+                            }
+
+                            50% {
+                                transform: translateX(5px);
+                            }
+
+                            to,
+                            100% {
+                                transform: translateX(0px);
+                            }
+                        }
+
+                        @-webkit-keyframes pagination-move-top {
+
+                            from,
+                            0% {
+                                transform: translateY(-25px);
+                            }
+
+                            50% {
+                                transform: translateY(10px);
+                            }
+
+                            to,
+                            100% {
+                                transform: translateY(0px);
+                            }
+                        }
+
+                        @keyframes pagination-move-top {
+
+                            from,
+                            0% {
+                                transform: translateY(-25px);
+                            }
+
+                            50% {
+                                transform: translateY(10px);
+                            }
+
+                            to,
+                            100% {
+                                transform: translateY(0px);
+                            }
+                        }
+                    </style>
+
+
+                    <section class="pagination">
+                        <button id="pg-button-prev" type="button" class="pagination__button">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+
+                        <ul class="pagination__list">
+                            <li class="pagination__item pagination__item--1">
+                                <button id="pg-button-1" type="button">1</button>
+                            </li>
+                            <li class="pagination__item pagination__item--2">
+                                <button id="pg-button-2" type="button">2</button>
+                            </li>
+                            <li class="pagination__item pagination__item--3">
+                                <button id="pg-button-3" type="button">3</button>
+                            </li>
+                            <li class="pagination__item pagination__item--4">
+                                <button id="pg-button-4" type="button">4</button>
+                            </li>
+                            <li class="pagination__item pagination__item--5">
+                                <button id="pg-button-5" type="button">5</button>
+                            </li>
+                        </ul>
+
+                        <button id="pg-button-next" type="button" class="pagination__button">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                    </section>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+

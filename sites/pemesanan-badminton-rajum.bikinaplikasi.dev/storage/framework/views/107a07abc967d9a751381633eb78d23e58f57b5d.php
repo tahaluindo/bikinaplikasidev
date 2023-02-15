@@ -1,0 +1,99 @@
+<?php $__env->startSection('content'); ?>
+    <div class="main_content_iner ">
+        <div class="container-fluid plr_30 pb_30 pt_30 body_white_bg">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-12">
+                    <h3 class="mb-0">
+                        <?php echo e(ucwords(preg_replace('/[^a-zA-Z]/', ' ', \Illuminate\Support\Facades\Request::segment(1)))); ?>
+
+                    </h3>
+                    <div class="mb-3"></div>
+                    <table class="table" id='dataTable'>
+                        <thead>
+                            <tr>
+                                <th width=2>#</th>
+                                <th>Atas Nama</th>
+                                <th>No Hp</th>
+                                <th>Waktu Mulai</th>
+                                <th>Waktu Akhir</th>
+                                <th>Bukti Transfer</th>
+                                <th>Catatan</th>
+                                <th>Status</th>
+                                <th>Metode Pembayaran</th>
+                                <th>Lapangan</th>
+
+                                <th class="text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $__currentLoopData = $pemesanan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                <tr data-id='<?php echo e($item->id); ?>'>
+                                    <td>
+                                        <?php echo e($loop->iteration); ?>
+
+                                    </td>
+
+                                    <td><?php echo e($item->atas_nama); ?></td>
+                                    <td><?php echo e($item->no_hp); ?></td>
+                                    <td><?php echo e($item->waktu_mulai); ?></td>
+                                    <td><?php echo e($item->jumlah_jam); ?></td>
+                                    <td>
+                                        <?php if($item->bukti_transfer && $item->metode_pembayaran == "Transfer"): ?>
+                                            <img src='<?php echo e(url($item->bukti_transfer)); ?>' width="50" height="50">
+                                        <?php endif; ?>
+                                    </td>
+                                    <td><?php echo e($item->catatan); ?></td>
+                                    <td><?php echo e($item->status); ?></td>
+                                    <td><?php echo e($item->metode_pembayaran); ?></td>
+                                    <td><?php echo e($item->lapangan->nama); ?></td>
+
+                                    <td class="text-center">
+                                        <a class="badge badge-primary"
+                                            href="<?php echo e(url('/pemesanan/' . $item->id . '/terima')); ?>"
+                                            onclick="return confirm('Yakin akan menerima pesanan ini?')">Terima</a>
+                                        <a class="badge badge-primary"
+                                            href="<?php echo e(url('/pemesanan/' . $item->id . '/batal')); ?>"
+                                            onclick="return confirm('Yakin akan membatalkan pesanan ini?')">Batalkan</a>
+                                        <a class="badge badge-primary"
+                                            href="<?php echo e(url('/pemesanan/' . $item->id . '/pending')); ?>"
+                                            onclick="return confirm('Yakin akan pending pesanan ini?')">Pending</a>
+
+                                        <a class="label label-primary"
+                                            href="<?php echo e(url('/pemesanan/' . $item->id . '/edit')); ?>">Edit</a>
+                                        <form action="<?php echo e(url('/pemesanan' . '/' . $item->id)); ?>" method='post'
+                                            style='display: inline;'
+                                            onsubmit="return confirm('Yakin akan menghapus data ini?')">
+                                            <?php echo method_field('DELETE'); ?>
+                                            <?php echo csrf_field(); ?>
+                                            <label class="label label-danger" href=""
+                                                for='btnSubmit-<?php echo e($item->id); ?>' style='cursor: pointer;'>Hapus</label>
+                                            <button type="submit" id='btnSubmit-<?php echo e($item->id); ?>'
+                                                style="display: none;"></button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                        </tbody>
+                    </table>
+
+                    <script>
+                        const locationHrefHapusSemua = "<?php echo e(url('pemesanan/hapus_semua')); ?>";
+                        const locationHrefAktifkanSemua = "<?php echo e(url('pemesanan/aktifkan_semua')); ?>";
+                        const locationHrefCreate = "<?php echo e(url('pemesanan/create')); ?>";
+
+                        var columnOrders = [<?php echo e(0); ?>];
+                        var urlSearch = "<?php echo e(url('pemesanan')); ?>";
+                        var q = "<?php echo e($_GET['q'] ?? ''); ?>";
+                        var placeholder = "Filter...";
+
+                        var tampilkan_buttons = true;
+                        var button_manual = true;
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app3', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\bikinaplikasi\project\setup_server_default\sites\pemesanan-badminton-rajum.bikinaplikasi.dev\resources\views/pemesanan/index.blade.php ENDPATH**/ ?>

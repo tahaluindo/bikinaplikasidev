@@ -1,0 +1,46 @@
+{
+    "fields": [
+        {
+            "name": "nama",
+            "type": "string"
+        },
+        {
+            "name": "nama_pemilik_rekening",
+            "type": "string"
+        },
+        {
+            "name": "jumlah",
+            "type": "integer"
+        },
+        {
+            "name": "tanggal",
+            "type": "date"
+        },
+        {
+            "name": "pesan",
+            "type": "text"
+        }
+    ],
+    "validations": [
+        {
+            "field": "nama",
+            "rules": "required|max:30"
+        },
+        {
+            "field": "nama_pemilik_rekening",
+            "rules": "required|max:30"
+        },
+        {
+            "field": "jumlah",
+            "rules": "required"
+        },
+        {
+            "field": "tanggal",
+            "rules": "required|date"
+        },
+        {
+            "field": "pesan",
+            "rules": "required|max:255"
+        }
+    ]
+}

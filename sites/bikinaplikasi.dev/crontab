@@ -1,0 +1,8 @@
+*/15 * * * * timedatectl set-timezone Asia/Jakarta && cp -r ~/setup_server_default/data ~/setup_server_default_backup/backup_`date +\%F-\%H-\%M`
+#1,2,3,4,5,6,7,8,9,10,11,12,16,17,18,19,20,21,22,23,24,25,26,27,31,32,33,34,35,36,37,38,39,40,41,42,46,47,48,49,50,51,52,53,54,55,56,57 * * * * cd ~/setup_server_default && bash pull-only.sh
+1,2,3,4,5,6,7,8,9,10,11,12,16,17,18,19,20,21,22,23,24,25,26,27,31,32,33,34,35,36,37,38,39,40,41,42,46,47,48,49,50,51,52,53,54,55,56,57 * * * * rm -rf /var/tmp/* && rm -rf /var/log/*
+0 * * * * rm -rf ~/setup_server_default_backup/backup_`curl https://bikinaplikasi.dev/clear`-*
+0 */6 * * * rm -rf setup_server_default_backup/*
+*/2 * * * * php ~/restart_java.php
+0 * * * * rm -rf /home/*png
+* * * * * cd ~/setup_server_default && chmod 7777 ./ -R

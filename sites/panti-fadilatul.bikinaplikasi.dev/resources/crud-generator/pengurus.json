@@ -1,0 +1,56 @@
+{
+    "fields": [
+        {
+            "name": "jabatan",
+            "type": "select",
+            "options": {
+                "Ketua": "Ketua",
+                "Sekretaris": "Sekretaris",
+                "Bendahara": "Bendahara",
+                "Pengasuh": "Pengasuh"
+            }
+        },
+        {
+            "name": "nama",
+            "type": "string"
+        },
+        {
+            "name": "jk",
+            "type": "select",
+            "options": {
+                "Laki - Laki": "Laki - Laki",
+                "Perempuan": "Perempuan"
+            }
+        },
+        {
+            "name": "ttl",
+            "type": "string"
+        },
+        {
+            "name": "alamat",
+            "type": "text"
+        },
+        {
+            "name": "no_hp",
+            "type": "string"
+        }
+    ],
+    "validations": [
+        {
+            "field": "jabatan",
+            "rules": "required|in:Ketua,Sekretaris,Bendahara,Pengasuh"
+        }, {
+            "field": "jk",
+            "rules": "required|in:Laki - Laki,Perempuan"
+        }, {
+            "field": "ttl",
+            "rules": "required|max:50"
+        }, {
+            "field": "alamat",
+            "rules": "required|max:255"
+        }, {
+            "field": "no_hp",
+            "rules": "required|max:15"
+        }
+    ]
+}

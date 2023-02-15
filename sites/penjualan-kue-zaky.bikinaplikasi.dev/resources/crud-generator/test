@@ -1,0 +1,52 @@
+1. // jika projectnya pakai tampilan depan / front end maka ubah dulu templateny
+
+// kalo makai template admin baru, maka ubah dulu template adminny
+
+// cek apakah ad project yg perlu database sejenis, kalo ad copy aj kyak table, controllers, models
+
+// oke gas no 2
+
+
+2. 
+
+// ubah setupan env
+
+// cari tampilan templateny yang sesuai pakai table user
+
+// hapus model, controller, view, appservice provider yang tidak terpakai
+
+// benerin crud-generatornya sesuai table  user
+
+// matikan antivirusnya
+
+// jalankan dulu 2 ini untuk semua table
+php artisan crud:generate Fasilitas --fields_from_file="resources\crud-generator\sistem_informasi_sekolah\Fasilitas.json" --controller-namespace=App\Http\Controllers --form-helper=html --model-namespace=Models
+
+php artisan migrate --path=database/migrations/2021_11_28_164906_create_fasilitas_table.php // untuk migrasi table kos
+
+// baru ini satu satu
+#php artisan dashboard:make kos,tentang,disukai,user // membuat dashboard khusus user dan anggota
+
+#php artisan chart:make user,anggota // membuat chart khusus user dan anggota
+
+#php artisan sidebar:make session #membuat sidebar kecuali table session
+
+php artisan laporan:make session #membuat laporan kecuali table session
+
+php artisan formlaporan:make penjualan // membuat form laporan khusus untuk table pengeluaran (satu satu)
+
+php artisan printlaporan:make siswa id // membuat halaman tampilkan laporan pesanan kecuali kolom id (satu satu)
+
+// ubah nama table di model, sesuaikan besar kecilnya juga
+
+// cek dan benerin controllernya, nama class model, text, new class, parameter class
+
+// ganti file store dengan move pakai uuid_create(UUID_TYPE_DEFAULT) . "." . $request->file('gambar')->getClientOriginalExtension() untuk namanya
+
+// benerin string di controllernya
+
+// benerin route di route web
+
+// jalankan composer dump-autoload
+
+// gambar itu di bagian update tidak required

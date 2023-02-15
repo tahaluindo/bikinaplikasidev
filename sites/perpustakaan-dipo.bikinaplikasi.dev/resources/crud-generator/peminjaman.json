@@ -1,0 +1,69 @@
+{
+    "fields": [{
+            "name": "anggota_id",
+            "type": "select",
+            "options":{
+                "{{ $anggota->id }}" : "{{ $anggota->id }}"
+            }
+        },{
+            "name": "user_petugas_id",
+            "type": "select",
+            "options":{
+                "{{ $user_petugas->id }}" : "{{ $user_petugas->id }}"
+            }
+        },{
+            "name": "tanggal",
+            "type": "varchar"
+        },
+        {
+            "name": "tanggal_pengembalian",
+            "type": "varchar"
+        },
+        {
+            "name": "status",
+            "type": "select",
+            "options": {
+                "Berlangsung" : "Berlangsung",
+                "Selesai" : "Selesai"
+            }
+        }
+    ],
+
+    "foreign_keys": [{
+        "column": "anggota_id",
+        "references": "id",
+        "on": "Anggota",
+        "onDelete": "cascade"
+    }, {
+        "column": "user_petugas_id",
+        "references": "id",
+        "on": "User",
+        "onDelete": "cascade"
+    }],
+    "relationships": [{
+        "name": "anggota",
+        "type": "belongsTo",
+        "class": "App\\Models\\Anggota"
+    },{
+        "name": "petugas",
+        "type": "belongsTo",
+        "class": "App\\Models\\User"
+    }],
+
+    "validations": [{
+        "field": "anggota_id",
+        "rules": "required|number|exists:anggota,id"
+    }, {
+        "field": "user_petugas_id",
+        "rules": "required|integer|exists:user,id"
+    }, {
+        "field": "tanggal",
+        "rules": "required|max:12"
+    }, {
+        "field": "tanggal_pengembalian",
+        "rules": "required|max:12"
+    }, {
+        "field": "status",
+        "rules": "required|in:Berlangsung,Selesai"
+    }]
+}

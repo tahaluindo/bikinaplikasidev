@@ -1,0 +1,44 @@
+{
+    "fields": [{
+            "name": "penjual_id",
+            "type": "select",
+            "options": [{
+                "$penjual->id": "$penjual->nama"
+            }]},
+
+        {
+            "name": "meja_id",
+            "type": "select",
+            "options": [{
+                "$meja->id": "$meja->nama"
+            }]
+        },
+        {
+            "name": "atas_nama",
+            "type": "varchar"
+        },
+        {
+            "name": "status",
+            "type": "select",
+            "options": [{
+                "Belum Diproses": "Belum Diproses",
+                "Dibatalkan": "Dibatalkan",
+                "Diproses": "Diproses",
+                "Dibayar": "Dibayar"
+            }]
+        }],
+
+"foreign_keys": [],
+"relationships": [],
+
+"validations": [{
+    "field": "penjual_id",
+    "rules": "required|exists:penjual,id"
+}, {
+    "field": "meja_id",
+    "rules": "required|exists:meja,id"
+}, {
+    "field": "atas_nama",
+    "rules": "required"
+}]
+}

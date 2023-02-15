@@ -1,0 +1,73 @@
+{
+    "fields": [
+        {
+            "name": "pelanggan_id",
+            "type": "select",
+            "options": [
+                {"$id": "$nama"}
+            ]
+        }, {
+            "name": "kavling_id",
+            "type": "select",
+            "options": [
+                {"$id": "$nama"}
+            ]
+        }, {
+            "name": "cara_pembayaran",
+            "type": "select",
+            "options": [
+                {"Lunas": "Lunas"},
+                {"Angsuran": "Angsuran"}
+            ]
+        }, {
+            "name": "lama_angsuran",
+            "type": "integer"
+        }, {
+            "name": "batas_pembayaran",
+            "type": "date"
+        }, {
+            "name": "dp",
+            "type": "integer"
+        }, {
+            "name": "biaya_ppjb",
+            "type": "integer"
+        }, {
+            "name": "biaya_shm",
+            "type": "integer"
+        }, {
+            "name": "catatan",
+            "type": "text"
+        }
+    ],
+    "foreign_keys": [
+    ],
+    "relationships": [
+    ],
+    "validations": [
+        {
+            "field": "pelanggan_id",
+            "rules": "required|exists:pelanggan,id"
+        }, {
+            "field": "kavling_id",
+            "rules": "required|exists:kavling,id"
+        }, {
+            "field": "metode_pembayaran",
+            "rules": "required|in:Lunas,Angsuran"
+        }, {
+            "field": "lama_angsuran",
+            "rules": "required"
+        }, {
+            "field": "batas_angsuran",
+            "rules": "required|date"
+        }, {
+            "field": "dp",
+            "rules": "required"
+        }, {
+            "field": "biaya_ppjb",
+            "rules": "required"
+        }, {
+            "field": "biaya_shm",
+            "rules": "required"
+        }
+    ]
+}

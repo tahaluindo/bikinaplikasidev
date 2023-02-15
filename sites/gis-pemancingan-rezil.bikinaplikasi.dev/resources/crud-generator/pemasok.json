@@ -1,0 +1,28 @@
+{
+    "fields": [
+        {
+            "name": "nama",
+            "type": "string"
+        },
+        {
+            "name": "no_hp",
+            "type": "string"
+        },
+        {
+            "name": "alamat",
+            "type": "text"
+        }
+    ],
+    "validations": [
+        {
+            "field": "nama",
+            "rules": "required|max:30"
+        }, {
+            "field": "no_hp",
+            "rules": "required|max:15"
+        }, {
+            "field": "alamat",
+            "rules": "required|max:255"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "fields": [
+        {
+            "name": "barang_id",
+            "type": "select",
+            "options": {
+                "Ketua": "Ketua"
+            }
+        },
+        {
+            "name": "tahun_ke",
+            "type": "integer"
+        },
+        {
+            "name": "jumlah",
+            "type": "integer"
+        }
+    ],
+    "validations": [
+        {
+            "field": "barang_id",
+            "rules": "required|exists:barang,id"
+        },
+        {
+            "field": "tahun_ke",
+            "rules": "required"
+        },
+        {
+            "field": "jumlah",
+            "rules": "required"
+        }
+    ]
+}

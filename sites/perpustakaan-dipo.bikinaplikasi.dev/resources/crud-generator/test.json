@@ -1,0 +1,41 @@
+{
+    "fields": [{
+            "name": "user_id ",
+            "type": "file"
+        },{
+            "name": "nama ",
+            "type": "varchar"
+        },
+        {
+            "name": "umur",
+            "type": "integer"
+        },
+        {
+            "name": "deskripsi",
+            "type": "text"
+        }
+    ],
+
+    "foreign_keys": [{
+        "column": "user_id",
+        "references": "id",
+        "on": "users",
+        "onDelete": "cascade"
+    }],
+    "relationships": [{
+        "name": "user",
+        "type": "belongsTo",
+        "class": "App\\Models\\User"
+    }],
+
+    "validations": [{
+        "field": "nama",
+        "rules": "required|max:100"
+    }, {
+        "field": "umur",
+        "rules": "required|integer|digits_between:1,4"
+    }, {
+        "field": "deskripsi",
+        "rules": "required|max:100"
+    }]
+}

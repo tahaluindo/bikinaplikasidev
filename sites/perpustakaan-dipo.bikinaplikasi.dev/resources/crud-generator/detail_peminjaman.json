@@ -1,0 +1,55 @@
+{
+    "fields": [{
+            "name": "buku_id",
+            "type": "select",
+            "options":{
+                "{{ $buku->id }}" : "{{ $buku->id }}"
+            }
+        },{
+            "name": "jumlah",
+            "type": "number"
+        },{
+            "name": "status",
+            "type": "select",
+            "options":{
+                "Belum Dikembalikan" : "Belum Dikembalikan",
+                "Dikembalikan" : "Dikembalikan",
+                "Hilang" : "Hilang",
+                "Rusak" : "Rusak"
+            }
+        }
+    ],
+
+
+    "foreign_keys": [{
+        "column": "peminjaman_id",
+        "references": "id",
+        "on": "Peminjaman",
+        "onDelete": "cascade"
+    },{
+        "column": "buku_id",
+        "references": "id",
+        "on": "Buku",
+        "onDelete": "cascade"
+    }],
+
+
+    "relationships": [{
+        "name": "peminjaman",
+        "type": "belongsTo",
+        "class": "App\\Models\\Peminjaman"
+    },{
+        "name": "buku",
+        "type": "belongsTo",
+        "class": "App\\Models\\Buku"
+    }],
+
+
+    "validations": [{
+        "field": "buku_id",
+        "rules": "required|integer|exists:buku,id"
+    }, {
+        "field": "jumlah",
+        "rules": "required|integer|max:255"
+    }]
+}

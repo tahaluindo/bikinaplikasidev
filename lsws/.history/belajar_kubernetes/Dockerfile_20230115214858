@@ -1,0 +1,11 @@
+# FROM node:16
+# WORKDIR /usr/src/app
+# COPY package*.json ./
+# RUN npm install
+# EXPOSE 8080
+# COPY . .
+# CMD [ "node", "server.js" ]
+
+FROM mariadb:10.5.9
+ENV MYSQL_ROOT_PASSWORD=M@utauaja982
+EX

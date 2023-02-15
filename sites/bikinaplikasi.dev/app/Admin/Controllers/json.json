@@ -1,0 +1,49 @@
+{
+    "success": true,
+    "message": "Transaction found",
+    "data": {
+        "reference": "T30104102616AFWG",
+        "merchant_ref": "ANG0000016",
+        "payment_selection_type": "static",
+        "payment_method": "QRIS",
+        "payment_name": "QRIS",
+        "customer_name": "Ramdan Riawan",
+        "customer_email": "ramdanriawan3@gmail.com",
+        "customer_phone": null,
+        "callback_url": "http:\/\/bikinaplikasi.dev\/admin\/tripay\/callback",
+        "return_url": "http:\/\/bikinaplikasi.dev\/admin\/pesanan",
+        "amount": 10000,
+        "fee": 820,
+        "is_customer_fee": 0,
+        "amount_received": 9180,
+        "pay_code": null,
+        "pay_url": null,
+        "checkout_url": "https:\/\/payment.tripay.co.id\/checkout\/T30104102616AFWG",
+        "status": "PAID",
+        "paid_at": 1616590870,
+        "expired_time": 1617799840,
+        "order_items": [
+            {
+                "sku": "Program",
+                "name": "Program KP",
+                "price": 10000,
+                "quantity": 1,
+                "subtotal": 10000
+            }
+        ],
+        "instructions": [
+            {
+                "title": "Pembayaran via QRIS",
+                "steps": [
+                    "Masuk ke aplikasi dompet digital Anda yang telah mendukung QRIS",
+                    "Pindai\/Scan QR Code yang tersedia",
+                    "Akan muncul detail transaksi. Pastikan data transaksi sudah sesuai",
+                    "Selesaikan proses pembayaran Anda",
+                    "Transaksi selesai. Simpan bukti pembayaran Anda"
+                ]
+            }
+        ],
+        "qr_string": "00020101021226760024ID.CO.SPEEDCASH.MERCHANT01189360081530000919840215ID10200394207540303UKE51440014ID.CO.QRIS.WWW0215ID10200398366110303UKE5204549953033605405100005802ID5925P-STORE.NET - BIKIN APLIK6005NGAWI6105632636229010766843320507D6433910703A016304F96F",
+        "qr_url": "https:\/\/payment.tripay.co.id\/qr\/T30104102616AFWG"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "fields": [{
+            "name": "penyakit_id",
+            "type": "select",
+            "options": [{
+                "$penyakit->id": "$penyakit->nama"
+            }]
+        }, {
+            "name": "obat_id",
+            "type": "select",
+            "options": [{
+                "$obat->id": "$obat->nama"
+            }]
+        }
+    ],
+
+    "foreign_keys": [],
+    "relationships": []
+}

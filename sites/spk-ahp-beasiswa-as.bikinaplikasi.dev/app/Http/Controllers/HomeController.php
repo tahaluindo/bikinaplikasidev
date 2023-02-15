@@ -1,0 +1,34 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Controllers\Controller;
+use App\Kelas;
+use App\PembayaranSantri;
+use App\TransaksiLainnya;
+use App\User;
+
+class HomeController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+//        Pembayaran::with(['periodes' => function($query) use($request) {
+//            $query->where('siswa_id', '!=', $request->siswa_id);
+//        }])->get();
+    }
+}

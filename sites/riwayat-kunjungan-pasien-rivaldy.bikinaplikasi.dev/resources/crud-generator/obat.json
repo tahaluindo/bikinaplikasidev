@@ -1,0 +1,13 @@
+{
+    "fields": [{
+            "name": "nama",
+            "type": "varchar"
+        }, {
+            "name": "deskripsi",
+            "type": "text"
+        }
+    ],
+
+    "foreign_keys": [],
+    "relationships": []
+}

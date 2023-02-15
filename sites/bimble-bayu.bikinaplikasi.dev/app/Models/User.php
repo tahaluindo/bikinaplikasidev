@@ -1,0 +1,102 @@
+<?php
+
+namespace App\Models;
+
+use App\Models\Rekrutmen;
+use Laravel\Sanctum\HasApiTokens;
+use Illuminate\Support\Facades\Hash;
+use Laravel\Jetstream\HasProfilePhoto;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Fortify\TwoFactorAuthenticatable;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
+class User extends Authenticatable
+{
+    use HasApiTokens;
+    use HasFactory;
+    use HasProfilePhoto;
+    use Notifiable;
+    use TwoFactorAuthenticatable;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name',
+        'email',
+        'password',
+        'level'
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password',
+        'remember_token',
+        'two_factor_recovery_codes',
+        'two_factor_secret',
+    ];
+
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
+    protected $casts = [
+        'email_verified_at' => 'datetime',
+    ];
+
+    /**
+     * The accessors to append to the model's array form.
+     *
+     * @var array
+     */
+    protected $appends = [
+        'profile_photo_url',
+    ];
+
+    
+    protected $table = 'user';
+    protected $guarded = [];
+
+    public $timestamps = true;
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = Hash::make($value);
+    }
+
+    public function disukai()
+    {
+        return $this->hasMany(Disukai::class);
+    }
+    
+    public function siswa()
+    {
+        return $this->hasOne(Siswa::class);
+    }
+    
+    public function guru()
+    {
+        return $this->hasOne(Guru::class);
+    }
+    
+    public function getSiswa()
+    {
+        // if(auth()->user()->level == "Ortu") {
+        //     return $siswa = Siswa::where('user_id', auth()->user()->id + 1)->first();
+        // }
+        
+        if(auth()->user()->level == "Siswa") {
+            return auth()->user()->siswa;
+        }
+    }
+
+}

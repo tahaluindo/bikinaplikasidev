@@ -1,0 +1,7 @@
+i.fa.fa-eye-slash.fa-fw:hover {
+    cursor: pointer;
+}
+
+.modal-body {
+    overflow-x: scroll !important;
+}

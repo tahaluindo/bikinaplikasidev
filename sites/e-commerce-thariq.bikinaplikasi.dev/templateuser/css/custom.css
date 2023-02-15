@@ -1,0 +1,16 @@
+/** Your theme modifications here **/
+
+/* .carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive, .thumbnail a > img, .thumbnail > img {
+    display: block !important;
+    max-width: 100% !important;
+    height: 600px !important;
+    width: 100% !important;
+} */
+
+
+.carousel-inner > .item > a > img, .carousel-inner > .item > img, .img-responsive, .thumbnail a > img, .thumbnail > img {
+    display: block !important;
+    max-width: 100% !important;
+    height: 465px !important;
+    width: 100% !important;
+}

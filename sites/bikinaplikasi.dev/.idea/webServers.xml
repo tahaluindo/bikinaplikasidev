@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="5a89db5f-db34-4aea-a4cc-4be063efbaf6" name="bikinaplikasi.dev" url="http://185.211.5.241">
+        <fileTransfer rootFolder="/root/setup_server_default/sites/bikinaplikasi.dev" accessType="SFTP" host="185.211.5.241" port="22" sshConfigId="843aeca3-0c59-4ecf-92cf-daa4a5e7b79e" sshConfig="contabo">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

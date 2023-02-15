@@ -1,0 +1,14 @@
+{
+    "fields": [
+        {
+            "name": "keterangan",
+            "type": "string"
+        }
+    ],
+    "validations": [
+        {
+            "field": "keterangan",
+            "rules": "required"
+        }
+    ]
+}

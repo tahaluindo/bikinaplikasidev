@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="249b5d13-3544-4e4b-b6d6-8983b7e761cf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../api-admin-faithaction-api.bikinaplikasi.dev/.idea/sshConfigs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-admin-faithaction-api.bikinaplikasi.dev/.idea/sshConfigs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../api-admin-faithaction-api.bikinaplikasi.dev/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../api-admin-faithaction-api.bikinaplikasi.dev/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bikinaplikasi.dev/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../bikinaplikasi.dev/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bikinaplikasi.dev/app/Anggota.php" beforeDir="false" afterPath="$PROJECT_DIR$/../bikinaplikasi.dev/app/Anggota.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bikinaplikasi.dev/public/_10_2_2022, 3_18_00 PM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bikinaplikasi.dev/public/_10_3_2022, 9_20_00 AM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bikinaplikasi.dev/public/akan_membuka_posisi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../e-learning-rosa.bikinaplikasi.dev/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../e-learning-rosa.bikinaplikasi.dev/.idea/.gitignore" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/template admin/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/public/assets/css/flatpickr.min.css" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/public/assets/css/material_blue.css" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectId" id="2BHa5dEhvvozyraK4Yk2GzRaqNZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="16.14.2" />
+    <property name="javascript.nodejs.core.library.typings.version" value="16.11.44" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.3.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\bikinaplikasi\project\setup_server_default\sites\barbershop-iam.bikinaplikasi.dev\routes\api" />
+      <recent name="D:\bikinaplikasi\project\setup_server_default\sites\barbershop-iam.bikinaplikasi.dev\routes" />
+      <recent name="D:\bikinaplikasi\project\setup_server_default\sites\barbershop-iam.bikinaplikasi.dev\resources\views\user" />
+      <recent name="D:\bikinaplikasi\project\setup_server_default\sites\barbershop-iam.bikinaplikasi.dev\app\http\controllers" />
+      <recent name="D:\bikinaplikasi\project\setup_server_default\sites\barbershop-iam.bikinaplikasi.dev\resources\views\user\barber" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\bikinaplikasi\project\setup_server_default\sites\barbershop-iam.bikinaplikasi.dev\routes\web" />
+      <recent name="D:\bikinaplikasi\project\setup_server_default\sites\barbershop-iam.bikinaplikasi.dev\models" />
+      <recent name="D:\bikinaplikasi\project\setup_server_default\sites\barbershop-iam.bikinaplikasi.dev\resources\views\user\barber\karyawan" />
+      <recent name="D:\bikinaplikasi\project\setup_server_default\sites\barbershop-iam.bikinaplikasi.dev\resources\views\user\barber" />
+      <recent name="D:\bikinaplikasi\project\setup_server_default\sites\barbershop-iam.bikinaplikasi.dev\public\assets\js" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="start" type="BatchConfigurationType" factoryName="Batch" temporary="true">
+      <module name="barbershop-iam.bikinaplikasi.dev" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="start.cmd" />
+      <option name="PARAMETERS" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="249b5d13-3544-4e4b-b6d6-8983b7e761cf" name="Default Changelist" comment="" />
+      <created>1656565284890</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656565284890</updated>
+      <workItem from="1656565286896" duration="2138000" />
+      <workItem from="1656602225179" duration="1553000" />
+      <workItem from="1657215741696" duration="31967000" />
+      <workItem from="1657274742271" duration="586000" />
+      <workItem from="1657280120748" duration="122313000" />
+      <workItem from="1657748156549" duration="2443000" />
+      <workItem from="1657837623404" duration="717000" />
+      <workItem from="1657850071766" duration="6352000" />
+      <workItem from="1657899728066" duration="46110000" />
+      <workItem from="1658115932070" duration="2415000" />
+      <workItem from="1658251185248" duration="571000" />
+      <workItem from="1658263331431" duration="563000" />
+      <workItem from="1658310703161" duration="589000" />
+      <workItem from="1658363097394" duration="4958000" />
+      <workItem from="1659090746871" duration="3751000" />
+      <workItem from="1666411813991" duration="44000" />
+      <workItem from="1666411903234" duration="731000" />
+      <workItem from="1666540461411" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

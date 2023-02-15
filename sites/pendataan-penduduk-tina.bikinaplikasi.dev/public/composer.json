@@ -1,0 +1,56 @@
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "~7.3.0"
+    },
+    "require-dev": {
+        
+    },
+    "config": {
+        
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            
+        },
+        "classmap": [
+            
+        ],
+        "files": [
+           
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            
+        ],
+        "post-root-package-install": [
+           
+        ],
+        "post-create-project-cmd": [
+            
+        ],
+        "post-install-cmd": [
+            "ln -sr storage/app/public public/storage"
+        ]
+    }
+}

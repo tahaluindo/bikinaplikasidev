@@ -1,0 +1,61 @@
+<div class="container-fluid py-4">
+    <div class="row">
+        <div class="col-6">
+            <div class="card my-4">
+                <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                    <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3" style="background-image:linear-gradient(180deg, #C29A6B 0%, #886E4F 100%);
+              box-shadow: 0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(233 159 30 / 40%) !important;">
+                        <h6 class="text-white text-capitalize ps-3">Edit Kategori</h6>
+                    </div>
+                </div>
+                <div class="card-body px-0 pb-2">
+                    <div class="table-responsive p-0">
+                        <div class="container">
+                            <form action="/user/kategori/<%- kategori.dataValues.id %>/update" enctype="multipart/form-data" method="post" id="form-edit-user-kategori">
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="type">Type</label>
+                                        <select class="form-control" id="type"
+                                                name="type" required>
+                                            <option value="<%- kategori.dataValues.type || '' %>"><%- kategori.dataValues.type %></option>
+                                            <option value="Produk">Produk</option>
+                                            <option value="Service">Service</option>
+                                            <option value="Potong Rambut">Potong Rambut</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="nama">Nama</label>
+                                        <input type="text" class="form-control" id="nama"
+                                               placeholder="Nama" value="<%- kategori !== undefined ? kategori.dataValues.nama : '' %>" name="nama" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="jenis">Jenis</label>
+                                        <select class="form-control" id="jenis"
+                                                name="jenis" required>
+                                            <option value="<%- kategori.dataValues.jenis || '' %>"><%- kategori.dataValues.jenis %></option>
+                                            <option value="Produk">Softening</option>
+                                            <option value="Service">Shining</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <button type="submit"
+                                        style="box-shadow:0 4px 20px 0 rgb(0 0 0 / 14%), 0 7px 10px -5px rgb(233 159 30 / 40%) !important"
+                                        class="btn btn-primary">Simpan
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

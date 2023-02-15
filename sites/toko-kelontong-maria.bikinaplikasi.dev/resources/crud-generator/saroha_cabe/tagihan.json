@@ -1,0 +1,23 @@
+{
+    "fields": [
+        {
+            "name": "pembeli_id",
+            "type": "select", 
+            "options": [
+                {
+                    "$id" : "$nama"
+                }
+            ]
+        }
+    ],
+    "foreign_keys": [
+    ],
+    "relationships": [
+    ],
+    "validations": [
+        {
+            "field": "pembeli_id",
+            "rules": "required|exists:pembeli_id"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "fields": [{
+            "name": "nama",
+            "type": "varchar"
+        }
+    ],
+
+    "foreign_keys": [],
+    "relationships": []
+}

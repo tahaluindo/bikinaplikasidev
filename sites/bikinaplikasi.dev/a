@@ -1,0 +1,17 @@
+INSERT INTO `admin_operation_log` (`id`, `user_id`, `path`, `method`, `ip`, `input`, `created_at`, `updated_at`) VALUES
+	(1, 1, 'admin', 'GET', '127.0.0.1', '[]', '2021-03-10 23:10:14', '2021-03-10 23:10:14'),
+	(2, 1, 'admin/auth/setting', 'GET', '127.0.0.1', '{"_pjax":"#pjax-container"}', '2021-03-10 23:10:27', '2021-03-10 23:10:27'),
+	(3, 1, 'admin/auth/setting', 'GET', '127.0.0.1', '[]', '2021-03-10 23:11:43', '2021-03-10 23:11:43'),
+	(4, 1, 'admin/auth/setting', 'GET', '127.0.0.1', '[]', '2021-03-10 23:13:37', '2021-03-10 23:13:37'),
+	(5, 1, 'admin/auth/setting', 'PUT', '127.0.0.1', '{"name":"Administrator","password":"M@utauaja982","password_confirmation":"M@utauaja982","_token":"pONRC0e0mo6iFrEHcOpy1jVicp7fpunRBhJGyo6k","_method":"PUT","_previous_":"http:\\/\\/localhost:8000\\/admin\\/auth\\/login"}', '2021-03-10 23:14:16', '2021-03-10 23:14:16'),
+	(6, 1, 'admin/auth/setting', 'GET', '127.0.0.1', '[]', '2021-03-10 23:14:18', '2021-03-10 23:14:18'),
+	(7, 1, 'admin', 'GET', '127.0.0.1', '{"_pjax":"#pjax-container"}', '2021-03-10 23:14:30', '2021-03-10 23:14:30'),
+	(8, 1, 'admin', 'GET', '127.0.0.1', '[]', '2021-03-10 23:17:30', '2021-03-10 23:17:30'),
+	(9, 1, 'admin/auth/users', 'GET', '127.0.0.1', '{"_pjax":"#pjax-container"}', '2021-03-10 23:17:59', '2021-03-10 23:17:59'),
+	(10, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{"_pjax":"#pjax-container"}', '2021-03-10 23:18:30', '2021-03-10 23:18:30'),
+	(11, 1, 'admin/auth/users', 'GET', '127.0.0.1', '{"_pjax":"#pjax-container"}', '2021-03-10 23:19:00', '2021-03-10 23:19:00'),
+	(12, 1, 'admin/auth/menu', 'GET', '127.0.0.1', '{"_pjax":"#pjax-container"}', '2021-03-10 23:19:05', '2021-03-10 23:19:05'),
+	(13, 1, 'admin/auth/menu', 'POST', '127.0.0.1', '{"parent_id":"0","title":"a","icon":"fa-bars","uri":"admin\\/auth\\/a","roles":["1",null],"permission":"auth.login","_token":"bqQqujmLLWThwSv46nrgqiaenj2QG8oWcwcEYAg6"}', '2021-03-10 23:20:25', '2021-03-10 23:20:25'),
+	(14, 1, 'admin/auth/menu', 'GET', '127/* large SQL query (190.4 KiB), snipped at 2,000 characters */
+/* SQL Error (1064): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1392 */
+/* Affected rows: 46  Found rows: 0  Warnings: 6  Duration for 13 of 14 queries: 4.111 sec. */

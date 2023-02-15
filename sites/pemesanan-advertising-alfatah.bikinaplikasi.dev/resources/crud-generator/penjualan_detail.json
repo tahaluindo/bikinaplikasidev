@@ -1,0 +1,52 @@
+{
+    "fields": [
+        {
+            "name": "pemesanan_id",
+            "type": "select",
+            "options": {
+                "$item->id": "$item->nama"
+            }
+        },
+        {
+            "name": "produk_id",
+            "type": "select",
+            "options": {
+                "$item->id": "$item->nama"
+            }
+        },
+        {
+            "name": "harga",
+            "type": "integer"
+        },
+        {
+            "name": "jumlah",
+            "type": "integer"
+        },
+        {
+            "name": "total",
+            "type": "integer"
+        }
+    ],
+    "validations": [
+        {
+            "field": "pemesanan_id",
+            "rules": "required|exists:pembelian,id"
+        },
+        {
+            "field": "produk_id",
+            "rules": "required|exists:produk,id"
+        },
+        {
+            "field": "harga",
+            "rules": "required"
+        },
+        {
+            "field": "jumlah",
+            "rules": "required"
+        },
+        {
+            "field": "total",
+            "rules": "required"
+        }
+    ]
+}

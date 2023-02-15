@@ -1,0 +1,613 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title> Barber HTML-5 Template </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+   <!-- CSS here -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/slicknav.css">
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+    <!--? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="assets/img/logo/loder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header>
+        <!--? Header Start -->
+        <div class="header-area header-transparent">
+            <div class="main-header header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-2 col-lg-2 col-md-1">
+                            <div class="logo">
+                                <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-10 col-lg-10 col-md-10">
+                            <div class="menu-main d-flex align-items-center justify-content-end">
+                                <!-- Main-menu -->
+                                <div class="main-menu f-right d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="about.html">About</a></li>
+                                            <li><a href="services.html">Services</a></li>
+                                            <li><a href="portfolio.html">Product</a></li>
+                                           <!-- <li><a href="blog.html">Blog</a>
+                                                <ul class="submenu">
+                                                    <li><a href="blog.html">Blog</a></li>
+                                                    <li><a href="blog_details.html">Blog Details</a></li>
+                                                    <li><a href="elements.html">Element</a></li>
+                                                </ul>
+                                            </li>-->
+                                            <li class="active"><a href="contact.html">Login</a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="header-right-btn f-right d-none d-lg-block ml-30">
+                                    <a href="from.html" class="btn header-btn">became a member</a>
+                                </div>
+                            </div>
+                        </div>   
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 pt-70 text-center">
+                                <h2>Login</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
+        <!--?  Contact Area start  -->
+<style>
+        html {
+          width: 100%;
+          height: 100%;
+        }
+
+        body {
+          color: rgba(0, 0, 0, 0.6);
+          font-family: "Roboto", sans-serif;
+          font-size: 14px;
+          line-height: 1.6em;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+
+        .overlay, .form-panel.one:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: none;
+          background: rgba(0, 0, 0, 0.8);
+          width: 100%;
+          height: 100%;
+        }
+
+        .form {
+          z-index: 0;
+          position: relative;
+          background: #FFFFFF;
+          width: 600px;
+          border-radius: 4px;
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+          box-sizing: border-box;
+          margin: 100px auto 10px;
+          overflow: hidden;
+        }
+        .form-toggle {
+          z-index: 10;
+          position: absolute;
+          top: 60px;
+          right: 60px;
+          background: #FFFFFF;
+          width: 60px;
+          height: 60px;
+          border-radius: 100%;
+          transform-origin: center;
+          transform: translate(0, -25%) scale(0);
+          opacity: 0;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+        .form-toggle:before, .form-toggle:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 30px;
+          height: 4px;
+          background: #4285F4;
+          transform: translate(-50%, -50%);
+        }
+        .form-toggle:before {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+        .form-toggle:after {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        .form-toggle.visible {
+          transform: translate(0, -25%) scale(1);
+          opacity: 1;
+        }
+        .form-group {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          margin: 0 0 20px;
+        }
+        .form-group:last-child {
+          margin: 0;
+        }
+        .form-group label {
+          display: block;
+          margin: 0 0 10px;
+          color: rgba(0, 0, 0, 0.6);
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 1;
+          text-transform: uppercase;
+          letter-spacing: 0.2em;
+        }
+        .two .form-group label {
+          color: #FFFFFF;
+        }
+        .form-group input {
+          outline: none;
+          display: block;
+          background: rgba(0, 0, 0, 0.1);
+          width: 100%;
+          border: 0;
+          border-radius: 4px;
+          box-sizing: border-box;
+          padding: 12px 20px;
+          color: rgba(0, 0, 0, 0.6);
+          font-family: inherit;
+          font-size: inherit;
+          font-weight: 500;
+          line-height: inherit;
+          transition: 0.3s ease;
+        }
+        .form-group input:focus {
+          color: rgba(0, 0, 0, 0.8);
+        }
+        .two .form-group input {
+          color: #FFFFFF;
+        }
+        .two .form-group input:focus {
+          color: #FFFFFF;
+        }
+        .form-group button {
+          outline: none;
+          background: #4285F4;
+          width: 100%;
+          border: 0;
+          border-radius: 4px;
+          padding: 12px 20px;
+          color: #FFFFFF;
+          font-family: inherit;
+          font-size: inherit;
+          font-weight: 500;
+          line-height: inherit;
+          text-transform: uppercase;
+          cursor: pointer;
+        }
+        .two .form-group button {
+          background: #FFFFFF;
+          color: #4285F4;
+        }
+        .form-group .form-remember {
+          font-size: 12px;
+          font-weight: 400;
+          letter-spacing: 0;
+          text-transform: none;
+        }
+        .form-group .form-remember input[type=checkbox] {
+          display: inline-block;
+          width: auto;
+          margin: 0 10px 0 0;
+        }
+        .form-group .form-recovery {
+          color: #4285F4;
+          font-size: 12px;
+          text-decoration: none;
+        }
+        .form-panel {
+          padding: 60px calc(5% + 60px) 60px 60px;
+          box-sizing: border-box;
+        }
+        .form-panel.one:before {
+          content: "";
+          display: block;
+          opacity: 0;
+          visibility: hidden;
+          transition: 0.3s ease;
+        }
+        .form-panel.one.hidden:before {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+        .form-panel.two {
+          z-index: 5;
+          position: absolute;
+          top: 0;
+          left: 95%;
+          background: #4285F4;
+          width: 100%;
+          min-height: 100%;
+          padding: 60px calc(10% + 60px) 60px 60px;
+          transition: 0.3s ease;
+          cursor: pointer;
+        }
+        .form-panel.two:before, .form-panel.two:after {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 60px;
+          left: 1.5%;
+          background: rgba(255, 255, 255, 0.2);
+          height: 30px;
+          width: 2px;
+          transition: 0.3s ease;
+        }
+        .form-panel.two:after {
+          left: 3%;
+        }
+        .form-panel.two:hover {
+          left: 93%;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .form-panel.two:hover:before, .form-panel.two:hover:after {
+          opacity: 0;
+        }
+        .form-panel.two.active {
+          left: 10%;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          cursor: default;
+        }
+        .form-panel.two.active:before, .form-panel.two.active:after {
+          opacity: 0;
+        }
+        .form-header {
+          margin: 0 0 40px;
+        }
+        .form-header h1 {
+          padding: 4px 0;
+          color: #4285F4;
+          font-size: 24px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+        .two .form-header h1 {
+          position: relative;
+          z-index: 40;
+          color: #FFFFFF;
+        }
+        .pen-footer {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          width: 600px;
+          margin: 20px auto 100px;
+        }
+        .pen-footer a {
+          color: #FFFFFF;
+          font-size: 12px;
+          text-decoration: none;
+          text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.1);
+        }
+        .pen-footer a .material-icons {
+          width: 12px;
+          margin: 0 5px;
+          vertical-align: middle;
+          font-size: 12px;
+        }
+
+        .cp-fab {
+          background: #FFFFFF !important;
+          color: #4285F4 !important;
+        }
+      </style>
+   
+
+<!-- Form-->
+<div class="form">
+  <div class="form-toggle"></div>
+  <div class="form-panel one" style="background: ">
+    <div class="form-header">
+      <h1 style="color: #d19f68">Account Login</h1>
+    </div>
+    <div class="form-content">
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required="required"/>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required="required"/>
+        </div>
+        <div class="form-group">
+          <label class="form-remember">
+            <input type="checkbox"/>Remember Me
+          </label><a class="form-recovery" href="#">Forgot Password?</a>
+        </div>
+        <div class="form-group">
+          <button type="submit" style="background-color:#495057">Log In</button>
+        </div>
+      </form>
+
+
+    </div>
+  </div>
+  <div class="sso-button-group" style="text-align: center">
+    <div style="background:url('https://new.edmodo.com/static/media/google_icon.570eadea.svg') no-repeat; background-size: 40px" class="sso-login-button btn btn-light qa-test-google_drive-login-btn ">
+        <div class="sso-login-icon-container"><div class="google-sso-login-icon"></div></div>
+        <div class="sso-provider-name"><span>Lanjutkan dengan Google</span></div></div></div>
+        <br>
+
+  <div class="form-panel two" style="background: #d19f68">
+    <div class="form-header">
+      <h1>Register Account</h1>
+    </div>
+    <div class="form-content">
+      <form>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required="required"/>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required="required"/>
+        </div>
+        <div class="form-group">
+          <label for="cpassword">Confirm Password</label>
+          <input type="password" id="cpassword" name="cpassword" required="required"/>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required="required"/>
+        </div>
+        <div class="form-group">
+          <button type="submit">Register</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="pen-footer" style="display:block">
+<Center>
+  <div class="row">
+    <div class="col-md-6" style="width:100%">
+      <div class="header-right-btn f-right d-none d-lg-block ml-30">
+        <a href="from.html" class="btn header-btn">became a member</a>
+      </div>
+    </div>
+    <div class="col-md-6" style="width:100%">
+      <div class="header-ltft-btn f-left d-none d-lg-block ml-30">
+        <a href="from.html" style="background: #495057;" class="btn header-btn">became a Barber</a>
+      </div>
+    </div>
+  
+  </div>
+</Center>
+</div>
+
+
+<Script>
+    $(document).ready(function () {
+      var panelOne = $(".form-panel.two").height(),
+        panelTwo = $(".form-panel.two")[0].scrollHeight;
+
+      $(".form-panel.two")
+        .not(".form-panel.two.active")
+        .on("click", function (e) {
+          e.preventDefault();
+
+          $(".form-toggle").addClass("visible");
+          $(".form-panel.one").addClass("hidden");
+          $(".form-panel.two").addClass("active");
+          $(".form").animate(
+            {
+              height: panelTwo
+            },
+            200
+          );
+        });
+
+      $(".form-toggle").on("click", function (e) {
+        e.preventDefault();
+        $(this).removeClass("visible");
+        $(".form-panel.one").removeClass("hidden");
+        $(".form-panel.two").removeClass("active");
+        $(".form").animate(
+          {
+            height: panelOne
+          },
+          200
+        );
+      });
+    });
+
+</Script>
+    </main>
+    <footer>
+        <!--? Footer Start-->
+        <div class="footer-area section-bg" data-background="assets/img/gallery/footer_bg.png">
+            <div class="container">
+                <div class="footer-top footer-padding">
+                    <div class="row d-flex justify-content-between">
+                        <div class="col-xl-3 col-lg-4 col-md-5 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <!-- logo -->
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p class="info1">Receive updates and latest news direct from Simply enter.</p>
+                                    </div>
+                                </div>
+                                <div class="footer-number">
+                                    <h4><span>+564 </span>7885 3222</h4>
+                                    <p>youremail@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Location </h4>
+                                    <ul>
+                                        <li><a href="#">Advanced</a></li>
+                                        <li><a href="#"> Management</a></li>
+                                        <li><a href="#">Corporate</a></li>
+                                        <li><a href="#">Customer</a></li>
+                                        <li><a href="#">Information</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Explore</h4>
+                                    <ul>
+                                        <li><a href="#">Cookies</a></li>
+                                        <li><a href="#">About</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Proparties</a></li>
+                                        <li><a href="#">Licenses</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-8">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4>Location</h4>
+                                    <div class="footer-pera">
+                                        <p class="info1">Subscribe now to get daily updates</p>
+                                    </div>
+                                </div>
+                                <!-- Form -->
+                                <div class="footer-form">
+                                    <div id="mc_embed_signup">
+                                        <form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscribe_form relative mail_part" novalidate="true">
+                                            <input type="email" name="EMAIL" id="newsletter-form-email" placeholder=" Email Address " class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your email address'">
+                                            <div class="form-icon">
+                                                <button type="submit" name="submit" id="newsletter-submit" class="email_icon newsletter-submit button-contactForm">Send</button>
+                                            </div>
+                                            <div class="mt-10 info"></div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                                <p><!-- Link back to bikinaplikasi can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://bikinaplikasi.com" target="_blank">bikinaplikasi</a>
+  <!-- Link back to bikinaplikasi can't be removed. Template is licensed under CC BY 3.0. --></p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    <!-- JS here -->
+
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    
+    <!-- Nice-select, sticky -->
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+    </body>
+</html>

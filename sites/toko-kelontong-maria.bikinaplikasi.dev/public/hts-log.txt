@@ -1,0 +1,129 @@
+HTTrack3.49-2+htsswf+htsjava launched on Wed, 30 Dec 2020 11:25:09 at http://html.phoenixcoded.net/dasho/bootstrap/default/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" http://html.phoenixcoded.net/dasho/bootstrap/default/index.html -O1 "D:\template\premium\admin\tmp 07" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+11:38:34	Warning: 	File not parsed, looks like binary: html.phoenixcoded.net/dasho/bootstrap/default/assets/fonts/fontawesome/webfonts/fa-brands-400.woff2
+11:38:35	Warning: 	File not parsed, looks like binary: html.phoenixcoded.net/dasho/bootstrap/default/assets/fonts/fontawesome/webfonts/fa-regular-400.woff2
+11:38:35	Warning: 	File not parsed, looks like binary: html.phoenixcoded.net/dasho/bootstrap/default/assets/fonts/fontawesome/webfonts/fa-solid-900.woff2
+11:38:45	Error: 	"Not Found" (404) at link html.phoenixcoded.net/dasho/bootstrap/default/assets/images/nav-bg/navbar-img-6.jpg (from html.phoenixcoded.net/dasho/bootstrap/default/assets/css/style.css)
+11:38:45	Error: 	"Not Found" (404) at link html.phoenixcoded.net/dasho/bootstrap/default/dashboard-crypto.html (from html.phoenixcoded.net/dasho/bootstrap/default/layout-static.html)
+11:38:47	Error: 	"Not Found" (404) at link html.phoenixcoded.net/dasho/bootstrap/default/form-select.html (from html.phoenixcoded.net/dasho/bootstrap/default/layout-static.html)
+11:45:49	Error: 	"Not Found" (404) at link html.phoenixcoded.net/dasho/bootstrap/default/cropped.jpg (from html.phoenixcoded.net/dasho/bootstrap/default/image_crop.html)
+11:48:23	Error: 	"Forbidden" (403) at link https://www.mapbox.com/files/assets/data/realworld.388.js (from html.phoenixcoded.net/dasho/bootstrap/default/map-location.html)
+11:48:23	Warning: 	Retry after error -5 (Unable to get server's address: No such host is known. ) at link {s}.tile.osm.org/{z}/{x}/{y}.png (from html.phoenixcoded.net/dasho/bootstrap/default/map-location.html)
+11:48:50	Error: 	"Not Found" (404) at link html.phoenixcoded.net/dasho/bootstrap/default/assets/images/logo.png (from html.phoenixcoded.net/dasho/bootstrap/default/auth-signin-img-tabs.html)
+11:48:52	Error: 	"Not Found" (404) at link html.phoenixcoded.net/dasho/bootstrap/default/assets/images/ticket/p1.png (from html.phoenixcoded.net/dasho/bootstrap/default/hd-dashboard.html)
+11:48:52	Error: 	"Not Found" (404) at link html.phoenixcoded.net/dasho/bootstrap/default/assets/images/ticket/p2.png (from html.phoenixcoded.net/dasho/bootstrap/default/hd-dashboard.html)
+11:48:52	Error: 	"Not Found" (404) at link html.phoenixcoded.net/dasho/bootstrap/default/assets/images/ticket/p3.png (from html.phoenixcoded.net/dasho/bootstrap/default/hd-dashboard.html)
+11:48:52	Error: 	"Not Found" (404) at link html.phoenixcoded.net/dasho/bootstrap/default/assets/images/ticket/p4.png (from html.phoenixcoded.net/dasho/bootstrap/default/hd-dashboard.html)
+11:48:52	Error: 	"Forbidden" (403) at link html.phoenixcoded.net/dasho/bootstrap/default/assets/images/product/ (from html.phoenixcoded.net/dasho/bootstrap/default/hd-detail.html)
+11:48:52	Error: 	"Forbidden" (403) at link html.phoenixcoded.net/dasho/bootstrap/default/assets/images/user/ (from html.phoenixcoded.net/dasho/bootstrap/default/hd-detail.html)
+11:48:58	Error: 	"Not Found" (404) at link html.phoenixcoded.net/dasho/bootstrap/default/tbl_datatable.html (from html.phoenixcoded.net/dasho/bootstrap/default/doc/index.html)
+11:48:59	Error: 	"Not Found" (404) at link html.phoenixcoded.net/dasho/bootstrap/default/assets/plugins/owl-carousel/css/owl.video.play.png (from html.phoenixcoded.net/dasho/bootstrap/default/assets/plugins/owl-carousel/css/owl.carousel.min.css)
+11:49:07	Warning: 	File not parsed, looks like binary: html.phoenixcoded.net/dasho/bootstrap/default/assets/fonts/material/fonts/materialdesignicons-webfont.woff2?v=2.6.95
+11:49:23	Warning: 	File not parsed, looks like binary: html.phoenixcoded.net/dasho/bootstrap/default/assets/fonts/simple-line-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0
+12:00:52	Error: 	"Not Found" (404) at link https://github.com/zenorocha/clipboard.js/security/overall-count (from https://github.com/zenorocha/clipboard.js)
+12:00:56	Error: 	"Not Found" (404) at link https://github.com/zenorocha/clipboard.js/branches (from https://github.com/zenorocha/clipboard.js)
+12:01:52	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/26a8d6392456eebc7dfa3410e232f7319180d120 not scanned (follow robots meta tag)
+12:02:21	Warning: 	Link https://github.com/zenorocha/clipboard.js/tree/26a8d6392456eebc7dfa3410e232f7319180d120 not scanned (follow robots meta tag)
+12:02:32	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/132fcd16b11aac48703cb7f2c928e7d0c428a46e not scanned (follow robots meta tag)
+12:02:40	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/9086f3ed64b954d9021a1e5a94db6b4c2d1c77ab not scanned (follow robots meta tag)
+12:02:44	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/fddd2aac5f8772c468b36e8607ab9b0704ee73c6 not scanned (follow robots meta tag)
+12:02:49	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/e430d056ad3b6a0cd887bac7f7ff291ee125a400 not scanned (follow robots meta tag)
+12:03:38	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/894a3bef4a0e2fe9b90b2027b0f8cac88c986420 not scanned (follow robots meta tag)
+12:03:54	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/f56825bf73ee501744e09bab679c025356da0da0 not scanned (follow robots meta tag)
+12:04:14	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/5ef3f1a817d5cea10cca1d887a9d82b6426c0943 not scanned (follow robots meta tag)
+12:04:35	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/9ddd3a801776f4f13bab63cb7926edac027ef87c not scanned (follow robots meta tag)
+12:04:40	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/ce79f170aa655c408b6aab33c9472e8e4fa52e19 not scanned (follow robots meta tag)
+12:05:27	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/e7f0ff0392f0d5b22ff35d07fc87f28bd6c96efd not scanned (follow robots meta tag)
+12:05:37	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/d28418675b90f877b1b4d4217ce516a6f60ec428 not scanned (follow robots meta tag)
+12:06:01	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/83824fa248b2f06a309404da89feac10a6e59a85 not scanned (follow robots meta tag)
+12:07:48	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/4c3a0868669f1336dd1a56d2450ef1982913bdab not scanned (follow robots meta tag)
+12:08:05	Warning: 	Link https://github.com/zenorocha/clipboard.js/commit/780d3908567152e9a8f6680e9517e2ca4b06d614 not scanned (follow robots meta tag)
+12:09:06	Warning: 	file not stored in cache due to bogus state (incomplete type with Not Acceptable (200), size 0): https://github.com/zenorocha/clipboard.js/compare/tag-list?range=v2.0.6&tag_name=v2.0.6&type=base
+12:09:12	Warning: 	file not stored in cache due to bogus state (incomplete type with Not Acceptable (200), size 0): https://github.com/zenorocha/clipboard.js/compare/tag-list?range=v2.0.5&tag_name=v2.0.5&type=base
+12:09:20	Warning: 	file not stored in cache due to bogus state (incomplete type with Not Acceptable (200), size 0): https://github.com/zenorocha/clipboard.js/compare/tag-list?range=v2.0.4&tag_name=v2.0.4&type=base
+12:09:25	Warning: 	file not stored in cache due to bogus state (incomplete type with Not Acceptable (200), size 0): https://github.com/zenorocha/clipboard.js/compare/tag-list?range=v2.0.3&tag_name=v2.0.3&type=base
+12:09:29	Warning: 	file not stored in cache due to bogus state (incomplete type with Not Acceptable (200), size 0): https://github.com/zenorocha/clipboard.js/compare/tag-list?range=v2.0.2&tag_name=v2.0.2&type=base
+12:09:35	Warning: 	file not stored in cache due to bogus state (incomplete type with Not Acceptable (200), size 0): https://github.com/zenorocha/clipboard.js/compare/tag-list?range=v2.0.1&tag_name=v2.0.1&type=base
+12:09:41	Warning: 	file not stored in cache due to bogus state (incomplete type with Not Acceptable (200), size 0): https://github.com/zenorocha/clipboard.js/compare/tag-list?range=v2.0.0&tag_name=v2.0.0&type=base
+12:09:50	Warning: 	file not stored in cache due to bogus state (incomplete type with Not Acceptable (200), size 0): https://github.com/zenorocha/clipboard.js/compare/tag-list?range=v1.7.1&tag_name=v1.7.1&type=base
+12:10:13	Warning: 	file not stored in cache due to bogus state (incomplete type with Not Acceptable (200), size 0): https://github.com/zenorocha/clipboard.js/compare/tag-list?range=v1.6.1&tag_name=v1.6.1&type=base
+12:10:20	Warning: 	Link https://github.com/zenorocha/clipboard.js/releases/tag/v2.0.6 not scanned (follow robots meta tag)
+12:37:40	Error: 	"Not Found" (404) at link https://github.com/twitter/typeahead.js/security/overall-count (from https://github.com/twitter/typeahead.js)
+12:37:44	Error: 	"Not Found" (404) at link https://github.com/twitter/typeahead.js/branches (from https://github.com/twitter/typeahead.js)
+12:38:40	Warning: 	Link https://github.com/twitter/typeahead.js/commit/588440f66559714280628a4f9799f0c4eb880a4a not scanned (follow robots meta tag)
+12:39:28	Warning: 	Link https://github.com/twitter/typeahead.js/tree/588440f66559714280628a4f9799f0c4eb880a4a not scanned (follow robots meta tag)
+12:39:35	Warning: 	Link https://github.com/twitter/typeahead.js/commit/330f249428867f9353ecfa4d3997386390d07812 not scanned (follow robots meta tag)
+12:39:39	Warning: 	Link https://github.com/twitter/typeahead.js/commit/8d3e6de304486826ac47069cd2a2103c2f67897c not scanned (follow robots meta tag)
+12:39:45	Warning: 	Link https://github.com/twitter/typeahead.js/commit/e40ecd9356ad0a882fb80170314b8a220930f4a2 not scanned (follow robots meta tag)
+12:39:46	Warning: 	Link https://github.com/twitter/typeahead.js/pull/1186 not scanned (follow robots meta tag)
+12:39:54	Warning: 	Link https://github.com/twitter/typeahead.js/commit/c399d4b8ad410395bfb7d1353e5ec8a692a6aba8 not scanned (follow robots meta tag)
+12:40:01	Warning: 	Link https://github.com/twitter/typeahead.js/commit/3c0e45968ab2128668e680edc41be8555246ed5c not scanned (follow robots meta tag)
+12:40:11	Warning: 	Link https://github.com/twitter/typeahead.js/commit/33f029d37fbd31a19defce678cb8b0657a18a61d not scanned (follow robots meta tag)
+12:40:51	Warning: 	Link https://github.com/twitter/typeahead.js/commit/33ab95374ebe87d910e89ef07010ae4751d1f15c not scanned (follow robots meta tag)
+12:40:59	Warning: 	Link https://github.com/twitter/typeahead.js/commit/e3c6dc423bc63629626b8e92035ece254eee4f93 not scanned (follow robots meta tag)
+12:41:09	Warning: 	Link https://github.com/twitter/typeahead.js/commit/7a01c6e71820619ad7608aca4f1e1ebdec4ba6f0 not scanned (follow robots meta tag)
+12:41:11	Warning: 	Link https://github.com/twitter/typeahead.js/commit/9acc57d23d1e8eac6f3cfbcb93ccb5276197abc4 not scanned (follow robots meta tag)
+12:41:16	Warning: 	Link https://github.com/twitter/typeahead.js/commit/5f3787a2e1aa3634a35ef2dc179b98c8fc29079f not scanned (follow robots meta tag)
+12:41:17	Warning: 	Link https://github.com/twitter/typeahead.js/pull/1096 not scanned (follow robots meta tag)
+12:41:28	Warning: 	Link https://github.com/twitter/typeahead.js/commit/2dbf80c316f58f376fbace1f54c0372d06206fc4 not scanned (follow robots meta tag)
+12:41:32	Warning: 	Link https://github.com/twitter/typeahead.js/commit/a15ab7cd8828e0c2a5ad7884844d70cbb787bdd9 not scanned (follow robots meta tag)
+12:41:48	Error: 	"Forbidden" (403) at link stackoverflow.com/questions/tagged/typeahead.js (from https://github.com/twitter/typeahead.js)
+12:41:48	Error: 	"Not Found" (404) at link https://github.com/twitter/typeahead.js/labels/entry-level (from https://github.com/twitter/typeahead.js)
+12:42:37	Warning: 	File not parsed, looks like binary: html.phoenixcoded.net/dasho/bootstrap/default/assets/js/plugins/summernote/font/summernote.woff2
+12:53:32	Error: 	"Not Found" (404) at link https://github.com/chartjs/Chart.js/security/overall-count (from https://github.com/chartjs/Chart.js)
+12:53:50	Error: 	"Not Found" (404) at link https://github.com/chartjs/Chart.js/branches (from https://github.com/chartjs/Chart.js)
+12:55:26	Warning: 	Link https://github.com/chartjs/Chart.js/commit/c2091fc77dd70435e339e6167b1556891a7da451 not scanned (follow robots meta tag)
+12:55:27	Warning: 	Link https://github.com/chartjs/Chart.js/pull/8248 not scanned (follow robots meta tag)
+12:55:52	Warning: 	Link https://github.com/chartjs/Chart.js/tree/c2091fc77dd70435e339e6167b1556891a7da451 not scanned (follow robots meta tag)
+12:55:59	Warning: 	Link https://github.com/chartjs/Chart.js/commit/1110d4dd1996619ff89344b69e5d66716dcc6ddf not scanned (follow robots meta tag)
+12:56:00	Warning: 	Link https://github.com/chartjs/Chart.js/pull/8204 not scanned (follow robots meta tag)
+12:56:34	Warning: 	Link https://github.com/chartjs/Chart.js/commit/794f13ae0a462f0da3717af9a21ac882a6d5b7c3 not scanned (follow robots meta tag)
+12:56:34	Warning: 	Link https://github.com/chartjs/Chart.js/pull/8245 not scanned (follow robots meta tag)
+12:56:41	Warning: 	Link https://github.com/chartjs/Chart.js/commit/391e4b6f2e3361ec09a79a2357e45d99a741c050 not scanned (follow robots meta tag)
+12:56:42	Warning: 	Link https://github.com/chartjs/Chart.js/pull/7806 not scanned (follow robots meta tag)
+12:56:53	Warning: 	Link https://github.com/chartjs/Chart.js/commit/c3fbe5efc34665a54d22de09bbdad1e7b96b115c not scanned (follow robots meta tag)
+12:56:55	Warning: 	Link https://github.com/chartjs/Chart.js/pull/8113 not scanned (follow robots meta tag)
+12:57:06	Warning: 	Link https://github.com/chartjs/Chart.js/commit/efa0ade501b774a71938437e78b429eb2b0a4d2a not scanned (follow robots meta tag)
+12:57:06	Warning: 	Link https://github.com/chartjs/Chart.js/pull/7891 not scanned (follow robots meta tag)
+12:57:33	Warning: 	Link https://github.com/chartjs/Chart.js/commit/66c92548e8c4b051d2aa71b1244e5f25e510d6e2 not scanned (follow robots meta tag)
+12:57:34	Warning: 	Link https://github.com/chartjs/Chart.js/pull/8238 not scanned (follow robots meta tag)
+12:57:43	Warning: 	Link https://github.com/chartjs/Chart.js/commit/910158055f875bd497980b2fad6a570ba92f4e75 not scanned (follow robots meta tag)
+12:57:44	Warning: 	Link https://github.com/chartjs/Chart.js/pull/8009 not scanned (follow robots meta tag)
+12:57:49	Warning: 	Link https://github.com/chartjs/Chart.js/commit/9ddb449ad1abae8dd95639a60311fb8bfc17e572 not scanned (follow robots meta tag)
+12:57:49	Warning: 	Link https://github.com/chartjs/Chart.js/pull/5112 not scanned (follow robots meta tag)
+12:57:54	Warning: 	Link https://github.com/chartjs/Chart.js/commit/e277aa4c1fb0dffb7e59c31a4913d78687549a7e not scanned (follow robots meta tag)
+12:57:55	Warning: 	Link https://github.com/chartjs/Chart.js/pull/8004 not scanned (follow robots meta tag)
+12:58:00	Warning: 	Link https://github.com/chartjs/Chart.js/commit/92b2f7908e3a84c3f34f0c1574206d137284e086 not scanned (follow robots meta tag)
+12:58:02	Warning: 	Link https://github.com/chartjs/Chart.js/pull/7076 not scanned (follow robots meta tag)
+12:58:07	Warning: 	Link https://github.com/chartjs/Chart.js/commit/99aa1a4215efd295fd6768d96df3a6fabfcbfde0 not scanned (follow robots meta tag)
+12:58:07	Error: 	"too many requests" (429) at link https://github.com/chartjs/Chart.js/pull/8075 (from https://github.com/chartjs/Chart.js)
+12:58:07	Error: 	"too many requests" (429) at link https://github.com/chartjs/Chart.js/blob/master/.gitignore (from https://github.com/chartjs/Chart.js)
+12:58:07	Error: 	"too many requests" (429) at link https://github.com/chartjs/Chart.js/blob/master/.htmllintrc (from https://github.com/chartjs/Chart.js)
+12:58:07	Error: 	"too many requests" (429) at link https://github.com/chartjs/Chart.js/commit/d2846864527898225bb8061cf24793101ef98dbf (from https://github.com/chartjs/Chart.js)
+12:58:07	Error: 	"too many requests" (429) at link https://github.com/chartjs/Chart.js/pull/5382 (from https://github.com/chartjs/Chart.js)
+12:58:07	Error: 	"too many requests" (429) at link https://github.com/chartjs/Chart.js/commit/fcd463354bae115b4847272ba44f23c57cc0d6ed (from https://github.com/chartjs/Chart.js)
+12:58:07	Error: 	"too many requests" (429) at link https://github.com/chartjs/Chart.js/pull/5053 (from https://github.com/chartjs/Chart.js)
+12:58:07	Error: 	"too many requests" (429) at link https://github.com/chartjs/Chart.js/blob/master/MAINTAINING.md (from https://github.com/chartjs/Chart.js)
+12:58:07	Error: 	"too many requests" (429) at link https://github.com/chartjs/Chart.js/commit/0c61d55682c60cde3410b072371f5b6623dca8f9 (from https://github.com/chartjs/Chart.js)
+12:58:08	Warning: 	Link https://github.com/chartjs/Chart.js/pull/7893 not scanned (follow robots meta tag)
+12:58:23	Warning: 	Link https://github.com/chartjs/Chart.js/commit/ff354cc5b8245049887f24cf855d19d928d6d8de not scanned (follow robots meta tag)
+12:58:24	Warning: 	Link https://github.com/chartjs/Chart.js/pull/7827 not scanned (follow robots meta tag)
+12:58:28	Warning: 	Link https://github.com/chartjs/Chart.js/commit/52b9793ba0c5155e599b5e03e1d66638ad68de04 not scanned (follow robots meta tag)
+12:58:51	Warning: 	Link https://github.com/chartjs/Chart.js/commit/af0658659031b6b5d8b5b1503671fda36f615c88 not scanned (follow robots meta tag)
+12:58:52	Warning: 	Link https://github.com/chartjs/Chart.js/pull/8237 not scanned (follow robots meta tag)
+12:59:23	Warning: 	Link https://github.com/chartjs/Chart.js/commit/e2145e3b55355f99327a1b5b46999f9c691b08bd not scanned (follow robots meta tag)
+12:59:26	Warning: 	Link https://github.com/chartjs/Chart.js/pull/7121 not scanned (follow robots meta tag)
+13:08:03	Warning: 	file not stored in cache due to bogus state (incomplete type with Not Acceptable (200), size 0): https://github.com/chartjs/Chart.js/compare/tag-list?range=v3.0.0-beta.4&tag_name=v3.0.0-beta.4&type=base
+13:10:56	Warning: 	Link https://github.com/chartjs/Chart.js/releases/tag/v2.9.4 not scanned (follow robots meta tag)
+13:15:10	Error: 	Exit requested by shell or user
+13:15:10	Error: 	Exit requested by shell or user
+* * MIRROR ABORTED! * *
+The current temporary cache is required for any update operation and only contains data downloaded during the present aborted session.
+The former cache might contain more complete information; if you do not want to lose that information, you have to restore it and delete the current cache.
+This can easily be done here by erasing the hts-cache/new.* files]

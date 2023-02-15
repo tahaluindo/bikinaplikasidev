@@ -1,0 +1,25 @@
+{
+    "fields": [{
+            "name": "pasien_id",
+            "type": "select",
+            "options": [{
+                "$pasien->id": "$pasien->nama"
+            }]
+        }, {
+            "name": "penyakit_id",
+            "type": "select",
+            "options": [{
+                "$penyakit->id": "$penyakit->nama"
+            }]
+        }, {
+            "name": "catatan",
+            "type": "text"
+        }, {
+            "name": "tanggal_berobat",
+            "type": "date"
+        }
+    ],
+
+    "foreign_keys": [],
+    "relationships": []
+}

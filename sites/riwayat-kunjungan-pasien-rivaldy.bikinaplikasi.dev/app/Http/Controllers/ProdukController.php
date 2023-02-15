@@ -1,0 +1,169 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+
+use App\Models\Produk;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+
+class ProdukController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function index(Request $request)
+    {
+        $data['produk'] = produk::paginate(1000);
+
+        $data['produk_count'] = count(Schema::getColumnListing('produk'));
+
+        return view('produk.index', $data);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\View\View
+     */
+    public function create()
+    {
+        return view('produk.create');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param \Illuminate\Http\Request $request
+     *
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function store(Request $request)
+    {
+        $this->validate($request, [
+			'nama' => 'required|max:30'
+		]);
+        $requestData = $request->all();
+
+        
+
+        produk::create($requestData);
+
+        return redirect()->route('produk.index')->with('success', 'Berhasil menambah produk');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     *
+     * @return \Illuminate\View\View
+     */
+    public function show(produk $produk)
+    {
+        $data["item"] = $produk;
+        $data["produk"] = $produk;
+
+        return view('produk.show', $data);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     *
+     * @return \Illuminate\View\View
+     */
+    public function edit(produk $produk)
+    {
+        $data["produk"] = $produk;
+        $data[strtolower("produk")] = $produk;
+
+        return view('produk.edit', $data);
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @param  int  $id
+     *
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function update(Request $request, produk $produk)
+    {
+        $this->validate($request, [
+			'nama' => 'required|max:30'
+		]);
+
+        $requestData = $request->all();
+
+        
+
+        $produk->update($requestData);
+
+        return redirect()->route('produk.index')->with('success', 'Berhasil mengubah produk');
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     *
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
+    public function destroy(produk $produk)
+    {
+        $produk->delete();
+
+        return redirect()->route('produk.index')->with('success', 'produk berhasil dihapus!');
+    }
+
+    public function hapus_semua(Request $request)
+    {
+        $produks = produk::whereIn('id', json_decode($request->ids, true))->get();
+
+        produk::whereIn('id', $produks->pluck('id'))->delete();
+
+        return back()->with('success', 'Berhasil menghapus banyak data produk');
+    }
+
+    public function laporan()
+    {
+
+        return view('produk.laporan.index');
+    }
+
+    public function print(Request $request)
+    {
+        $table = (new produk)->getTable();
+        $object = (new produk);
+
+        $fields = [];
+        foreach(DB::select("DESC $table") as $tableField)
+        {
+            $fields[] = $tableField->Field;
+        }
+
+        $this->validate($request, [
+            'field' => 'required|in:' . implode(',', $fields),
+            'order' => 'required|in:ASC,DESC',
+            'limit' => 'required|integer|max:' . $object->get()->count(),
+        ]);
+
+        $data["produks"] = $object->orderBy($request->field, $request->order)->limit($request->limit)->get();
+
+        if(!$data["produks"]->count()) {
+            
+            return back()->with('error', 'Data tidak ada!');
+        }
+
+        return view("produk.laporan.print", $data);
+    }
+}

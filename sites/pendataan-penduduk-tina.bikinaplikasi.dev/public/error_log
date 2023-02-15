@@ -1,0 +1,162 @@
+
+                        <!-- Nav items -->
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="<?php echo base_url(); ?>">
+                                    <i class="ni ni-tv-2 text-primary"></i>
+                                    <span class="nav-link-text">Dashboard</span>
+                                </a>
+                            </li>
+
+                            <?php if ($this->session->userdata('role')=='Bagian Pelayanan' OR $this->session->userdata('role')=='Admin'): ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataUser'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Data User</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataPendidikan'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Data Pendidikan</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataPekerjaan'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Data Pekerjaan</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataAgama'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Data Agama</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataLurah'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Data Lurah</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataPenduduk'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Data Penduduk</span>
+                                </a>
+                            </li>
+                            <!-- <li class="nav-item">
+                              <a class="nav-link" href="<?php echo site_url('Domisili'); ?>">
+                                <i class="ni ni-bullet-list-67 text-default"></i>
+                                <span class="nav-link-text">Data Domisili</span>
+                              </a>
+                            </li> -->
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataPenduduk'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Data Penduduk Tetap</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataPenduduk'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Data Penduduk Meninggal</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataPenduduk'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Data Penduduk Pindah</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataPenduduk'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Data Penduduk Datang</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataPenduduk'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Data Penduduk Lahir</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataPenduduk'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Laporan Penduduk Tetap</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataPenduduk'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Laporan Penduduk Meninggal</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataPenduduk'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Laporan Penduduk Pindah</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataPenduduk'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Laporan Penduduk Datang</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataPenduduk'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Laporan Penduduk Lahir</span>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('DataKK'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Laporan KK</span>
+                                </a>
+                            </li>
+                            <?php endif; ?>
+
+                        </ul>
+                        <ul class="navbar-nav flex-column">
+                            <?php if ($this->session->userdata('role')=='Bagian Pelayanan' OR $this->session->userdata('role')=='Admin'): ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('Laporan/add'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Tambah Laporan</span>
+                                </a>
+                            </li>
+                            <?php endif; ?>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="<?php echo site_url('Laporan'); ?>">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Lihat Laporan</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="laporan/cetak/penduduk">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Laporan Data Penduduk</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="laporan/cetak/domisili">
+                                    <i class="ni ni-bullet-list-67 text-default"></i>
+                                    <span class="nav-link-text">Laporan Data Domisili</span>
+                                </a>
+                            </li>
+                        </ul>

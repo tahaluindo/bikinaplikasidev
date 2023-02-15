@@ -1,0 +1,182 @@
+{
+    "fields": [{
+        "name": "detail_penjualan_aktual_id",
+        "type": "select",
+        "options": [{
+            "$detail_penjualan_aktual->id": "$detail_penjualan_aktual->nama"
+        }]
+    }, {
+        "name": "volume_januari",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "volume_februari",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "volume_maret",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "volume_april",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "volume_mei",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "volume_juni",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "volume_juli",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "volume_agustus",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "volume_september",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "volume_oktober",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "volume_november",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "volume_desember",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "harga_per_kg_januari",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "harga_per_kg_februari",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "harga_per_kg_maret",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "harga_per_kg_april",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "harga_per_kg_mei",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "harga_per_kg_juni",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "harga_per_kg_juli",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "harga_per_kg_juli",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "harga_per_kg_agustus",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "harga_per_kg_september",
+        "type": "number",
+        "placeholder": "0"
+    }, {
+        "name": "harga_per_kg_desember",
+        "type": "number",
+        "placeholder": "0"
+    }],
+
+    "foreign_keys": [],
+    "relationships": [{
+        "name": "data_penjualan_aktual",
+        "type": "belongsTo",
+        "class": "App\\Models\\DataPenjualanAktual"
+    }],
+
+    "validations": [{
+        "field": "detail_penjualan_aktual_id",
+        "rules": "required"
+    },{
+        "field": "volume_januari",
+        "rules": "required"
+    },{
+        "field": "volume_februari",
+        "rules": "required"
+    },{
+        "field": "volume_maret",
+        "rules": "required"
+    },{
+        "field": "volume_april",
+        "rules": "required"
+    },{
+        "field": "volume_mei",
+        "rules": "required"
+    },{
+        "field": "volume_juni",
+        "rules": "required"
+    },{
+        "field": "volume_juli",
+        "rules": "required"
+    },{
+        "field": "volume_agustus",
+        "rules": "required"
+    },{
+        "field": "volume_september",
+        "rules": "required"
+    },{
+        "field": "volume_oktober",
+        "rules": "required"
+    },{
+        "field": "volume_november",
+        "rules": "required"
+    },{
+        "field": "volume_desember",
+        "rules": "required"
+    },{
+        "field": "harga_per_kg_januari",
+        "rules": "required"
+    },{
+        "field": "harga_per_kg_februari",
+        "rules": "required"
+    },{
+        "field": "harga_per_kg_maret",
+        "rules": "required"
+    },{
+        "field": "harga_per_kg_april",
+        "rules": "required"
+    },{
+        "field": "harga_per_kg_mei",
+        "rules": "required"
+    },{
+        "field": "harga_per_kg_juli",
+        "rules": "required"
+    },{
+        "field": "harga_per_kg_agustus",
+        "rules": "required"
+    },{
+        "field": "harga_per_kg_september",
+        "rules": "required"
+    },{
+        "field": "harga_per_kg_oktober",
+        "rules": "required"
+    },{
+        "field": "harga_per_kg_november",
+        "rules": "required"
+    },{
+        "field": "harga_per_kg_desember",
+        "rules": "required"
+    }]
+}

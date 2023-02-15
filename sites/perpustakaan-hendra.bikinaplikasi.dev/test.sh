@@ -1,0 +1,26 @@
+curl "https://api-app.qq-os.com/api/v1/users/personal/information" ^
+  -H "authority: api-app.qq-os.com" ^
+  -H "accept: application/json, text/plain, */*" ^
+  -H "accept-language: en-US,en;q=0.9" ^
+  -H "app_version: 4.33.1" ^
+  -H "appid: 30004" ^
+  -H "authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI5MTY4NTU2MzA4MjI5NTcwNTgiLCJleHAiOjE2NTczODYzNTZ9.cZnYlEeKZdxqeiZaZx8KBF1yGh1I57SJ6HNbHAyysR62noXf0Hgs3MLCz7xqfRuadD9bhWJahy6PS9_HTbjeWw" ^
+  -H "channel: official" ^
+  -H "cookie: __cfruid=8dfdc83610483b6c48eac7a18c71c3775f9d1a86-1657151225; __cf_bm=o3Y3JfeLfAKk5JlQbddeHC16Qa8CTR5DmNqHN4JhrSc-1657153162-0-AREzBhzDdokaOZKZCRzr/h7SvKwXplTWsycoN9K7V1MySb22BsbQcM1f7IIANoShT5PC7Nroz0KyydvefvF5BBg=" ^
+  -H "device_id: e20b78f0-b177-11ec-960f-c9bb23bf51ff" ^
+  -H "lang: id-ID" ^
+  -H "mainappid: 10009" ^
+  -H "origin: https://bingx.com" ^
+  -H "platformid: 30" ^
+  -H "sec-ch-ua: ^\^".Not/A)Brand^\^";v=^\^"99^\^", ^\^"Google Chrome^\^";v=^\^"103^\^", ^\^"Chromium^\^";v=^\^"103^\^"" ^
+  -H "sec-ch-ua-mobile: ?0" ^
+  -H "sec-ch-ua-platform: ^\^"Windows^\^"" ^
+  -H "sec-fetch-dest: empty" ^
+  -H "sec-fetch-mode: cors" ^
+  -H "sec-fetch-site: cross-site" ^
+  -H "sign: 967058CF0503EFB6C71E50E545D42A72F481A9D147B5C8E09128B1817B5C0792" ^
+  -H "timestamp: 1657153454729" ^
+  -H "timezone: 7" ^
+  -H "traceid: 52003d3f-6c54-44ec-832e-9471c4c67240" ^
+  -H "user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" ^
+  --compressed

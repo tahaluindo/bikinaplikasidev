@@ -1,0 +1,10 @@
+- footer user, pelapak dan admin di ganti dengan
+ Copyright 2021. All Rights reserved.
+ Edit by . ACH.KHAFID SALIM
+ PULAU PINTAR KANGEAN BERBASIS TEKNOLOGI INFORMASI DI ERA INDUSTRI 4.0
+
+- tombol beli sekarang saat di sable warnanya di ganti dengan abu2
+
+- di tambahkan fitur COD
+
+- di halaman home itu produk yang di tampilkan hanya kategorii fashion aja. di tambahkan kategori lain supaya yang tampil produknya di home lebih banyak

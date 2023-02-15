@@ -1,0 +1,38 @@
+{
+    "fields": [
+        {
+            "name": "nama",
+            "type": "string"
+        },
+        {
+            "name": "ttl",
+            "type": "date"
+        },
+        {
+            "name": "alamat",
+            "type": "text"
+        },
+        {
+            "name": "no_hp",
+            "type": "string"
+        }
+    ],
+    "validations": [
+        {
+            "field": "nama",
+            "rules": "required|max:30"
+        },
+        {
+            "field": "ttl",
+            "rules": "required|max:50"
+        },
+        {
+            "field": "alamat",
+            "rules": "required|max:255"
+        },
+        {
+            "field": "no_hp",
+            "rules": "required|max:15"
+        }
+    ]
+}

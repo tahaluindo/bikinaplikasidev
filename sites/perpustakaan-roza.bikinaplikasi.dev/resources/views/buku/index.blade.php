@@ -1,0 +1,84 @@
+@extends('layouts.app3')
+
+@section('content')
+    <div class="container-fluid card">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="overview-wrap mt-3">
+                    <h2 class="title-1">Buku</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row ">
+            <div class="col-lg-12  mt-3">
+                <div class="table-responsive m-b-40">
+                    <table class="table" id='dataTable'>
+                        <thead>
+                        <tr>
+                            <th width=2>#</th>
+                            <th>Kode Buku</th>
+                            <th>Judul</th>
+                            <th>Penulis</th>
+                            <th>Penerbit</th>
+                            <th>Tahun</th>
+                            <th>Kota</th>
+                            <th>Exemplar</th>
+                            <th>Ditambahkan</th>
+                            <th class="text-center">Aksi</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach($buku as $item)
+                            <tr data-id='{{ $item->id }}'>
+                                <td>
+                                    {{ $loop->iteration }}
+                                </td>
+
+                                <td>{{ $item->kode_buku }}</td>
+                                <td>{{ $item->judul }}</td>
+                                <td>{{ $item->penulis }}</td>
+                                <td>{{ $item->penerbit }}</td>
+                                <td>{{ $item->tahun }}</td>
+                                <td>{{ $item->kota }}</td>
+                                <td>{{ $item->exemplar }}</td>
+                                <td>{{ $item->ditambahkan }}</td>
+
+                                <td class="text-center">
+                                    <a class="badge badge-primary"
+                                       href="{{ url('/buku/' . $item->id . '/edit') }}">Edit</a>
+                                    <form action="{{ url('/buku' . '/' . $item->id) }}" method='post'
+                                          style='display: inline;'
+                                          onsubmit="return confirm('Yakin akan menghapus data ini?')">
+                                        @method('DELETE')
+                                        @csrf
+                                        <label class="badge badge-danger" href="" for='btnSubmit-{{ $item->id }}'
+                                               style='cursor: pointer;'>Hapus</label>
+                                        <button type="submit" id='btnSubmit-{{ $item->id }}'
+                                                style="display: none;"></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const locationHrefHapusSemua = "{{ url('buku/hapus_semua') }}";
+        const locationHrefAktifkanSemua = "{{ url('buku/aktifkan_semua') }}";
+        const locationHrefCreate = "{{ url('buku/create') }}";
+        var columnOrders = [{{ $buku_count }}];
+        var urlSearch = "{{ url('buku') }}";
+        var q = "{{ $_GET['q'] ?? '' }}";
+        var placeholder = "Filter...";
+        var tampilkan_buttons = true;
+        var button_manual = true;
+    </script>
+@endsection
+
+

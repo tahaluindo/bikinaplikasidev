@@ -1,0 +1,1 @@
+grant all on *.* to 'vpsr_ramdan_3'@'115.178.210.120' identified by 'vpsr_ramdan_3'; 
