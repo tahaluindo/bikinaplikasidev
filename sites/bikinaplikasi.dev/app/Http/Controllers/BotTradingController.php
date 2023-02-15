@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use File;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
@@ -633,8 +634,24 @@ class BotTradingController extends Controller
         }
     }
 
+    public function checkUserPosition() {
+        if(file_exists('membuka_posisi_dimulai')) {
+            $membuka_posisi_dimulai = file_get_contents('membuka_posisi_dimulai');
+    
+            File::delete('membuka_posisi_dimulai');
+    
+            return $membuka_posisi_dimulai;
+        } else {
+            return response()->json([
+                'success' => false,
+            ]);
+        }
+    }
+
     public function openPosition(Request $request)
     {
+
+
         if (!$this->isLive) {
 
             $this->javascriptSound();

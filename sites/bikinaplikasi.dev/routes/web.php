@@ -680,6 +680,7 @@ Route::get('run_java', function () {
 //Auth::routes();
 
 Route::get("testing", [\App\Http\Controllers\TestingController::class, "index"]);
+Route::get("bot-trading/check-user-position", [\App\Http\Controllers\BotTradingController::class, "checkUserPosition"]);
 Route::get("bot-trading/test", [\App\Http\Controllers\BotTradingController::class, "test"]);
 Route::get("bot-trading/alerts", [\App\Http\Controllers\BotTradingController::class, "alerts"]);
 Route::get("bot-trading/get-orders", [\App\Http\Controllers\BotTradingController::class, "getOrders"]);
