@@ -652,7 +652,7 @@ class BotTradingController extends Controller
 
     public function openPosition(Request $request)
     {
-
+        file_put_contents("membuka_posisi_dimulai", json_encode($request->toArray()));
 
         if (!$this->isLive) {
 
