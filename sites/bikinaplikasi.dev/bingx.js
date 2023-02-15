@@ -46,7 +46,7 @@ var theInterval = setInterval(async () => {
                     "visitorid": "X3NBC0V7Ml9dmYkhC3NN"
                 },
                 "referrerPolicy": "no-referrer",
-                "body": "{\"fundType\":1,\"largeSpreadRate\":0,\"leverTimes\":20,\"margin\":\"2\",\"marginCoinName\":\"USDT\",\"marketFactor\":1,\"orderType\":\"0\",\"price\":0.698979,\"profitLossRateDto\":{\"stopProfitRate\":\"120\",\"stopLossRate\":\"30\"},\"quotationCoinId\":22,\"spreadRate\":0.001,\"stopLossPrice\":-1,\"stopProfitPrice\":-1,\"upRatio\":0.5}",
+                "body": "{\"fundType\":1,\"largeSpreadRate\":0,\"leverTimes\":20,\"margin\":\"50\",\"marginCoinName\":\"USDT\",\"marketFactor\":1,\"orderType\":\"0\",\"price\":0.698979,\"profitLossRateDto\":{\"stopProfitRate\":\"120\",\"stopLossRate\":\"30\"},\"quotationCoinId\":22,\"spreadRate\":0.001,\"stopLossPrice\":-1,\"stopProfitPrice\":-1,\"upRatio\":0.5}",
                 "method": "POST",
                 "mode": "cors",
                 "credentials": "include"
@@ -87,7 +87,7 @@ var theInterval = setInterval(async () => {
                     "visitorid": "X3NBC0V7Ml9dmYkhC3NN"
                 },
                 "referrerPolicy": "no-referrer",
-                "body": "{\"fundType\":1,\"largeSpreadRate\":0,\"leverTimes\":20,\"margin\":\"2\",\"marginCoinName\":\"USDT\",\"marketFactor\":1,\"orderType\":\"1\",\"price\":0.698979,\"profitLossRateDto\":{\"stopProfitRate\":\"120\",\"stopLossRate\":\"30\"},\"quotationCoinId\":22,\"spreadRate\":0.001,\"stopLossPrice\":-1,\"stopProfitPrice\":-1,\"upRatio\":0.5}",
+                "body": "{\"fundType\":1,\"largeSpreadRate\":0,\"leverTimes\":20,\"margin\":\"50\",\"marginCoinName\":\"USDT\",\"marketFactor\":1,\"orderType\":\"1\",\"price\":0.698979,\"profitLossRateDto\":{\"stopProfitRate\":\"120\",\"stopLossRate\":\"30\"},\"quotationCoinId\":22,\"spreadRate\":0.001,\"stopLossPrice\":-1,\"stopProfitPrice\":-1,\"upRatio\":0.5}",
                 "method": "POST",
                 "mode": "cors",
                 "credentials": "include"
