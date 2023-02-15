@@ -837,7 +837,7 @@ $(document).ready(() => {
                         console.log(((new Date().getMinutes() === a - 1) || (new Date().getMinutes() === 59)));
                         console.log(new Date().getSeconds() >= 57);
     
-                        if (((new Date().getMinutes() === a - 1) || (new Date().getMinutes() === 59)) && new Date().getSeconds() >= 30) {
+                        if (((new Date().getMinutes() === a - 1) || (new Date().getMinutes() === 59)) && new Date().getSeconds() >= 57) {
                             console.log("Chart timeframenya udah masuk")
     
                             setTimeout(() => {
