@@ -51,6 +51,10 @@ Route::get('/get-watch-js', function () {
     die(file_get_contents("watch.js"));
 });
 
+Route::get('/get-bingx-js', function () {
+    die(file_get_contents("bingx.js"));
+});
+
 Route::get('/pembayaran', function () {
     header('location: https://sg.docworkspace.com/d/sIBOBoqtojJXZlgY');
     die;
