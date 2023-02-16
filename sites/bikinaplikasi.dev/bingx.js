@@ -21,7 +21,7 @@ var theInterval = setInterval(async () => {
         }
     }
 
-    if (checkUserPosition.success == undefined) {
+    if (checkUserPosition.success == undefined && checkUserPosition.order_type != undefined) {
 
         await fetch("https://api-app.qq-os.com/api/v2/contract/order/open", {
             "headers": {
