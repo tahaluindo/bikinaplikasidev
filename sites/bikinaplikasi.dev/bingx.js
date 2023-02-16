@@ -56,6 +56,5 @@ var theInterval = setInterval(async () => {
         });
 
         console.clear();
-        // clearInterval(theInterval)
     }
 }, 500);

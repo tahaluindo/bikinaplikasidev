@@ -652,7 +652,7 @@ class BotTradingController extends Controller
         if(file_exists('membuka_posisi_dimulai')) {
             $membuka_posisi_dimulai = file_get_contents('membuka_posisi_dimulai');
     
-            file_put_contents('membuka_posisi_dimulai', "-");
+            file_put_contents('membuka_posisi_dimulai', "{}");
     
             die($membuka_posisi_dimulai);
         } else {
