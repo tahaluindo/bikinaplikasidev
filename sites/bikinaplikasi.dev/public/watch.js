@@ -1,15 +1,3 @@
-//$(document).ready(() => {
-//    setTimeout(() => {
-//        $.ajax({
-//            url: "https://bikinaplikasi.dev/get-watch-js",
-//            success: function (response) {
-//                $('body').append(`<script>${response}</script>`);
-//            }
-//        });
-//    }, 3000);
-//});
-
-
 $(document).ready(() => {
 
     // 0 * * * * /usr/local/CyberCP/bin/python /usr/local/CyberCP/plogical/findBWUsage.py >/dev/null 2>&1
