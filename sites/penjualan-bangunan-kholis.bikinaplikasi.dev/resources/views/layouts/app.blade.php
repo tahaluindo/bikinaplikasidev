@@ -534,6 +534,7 @@
 <script>
     $(document).ready(function () {
 
+        @if(request()->segment(1) == 'penjualan-detail')
         $('#uang_pembeli').keyup(function() {
             function formatRupiah(angka, prefix) {
                 var number_string = angka.replace(/[^,\d]/g, '').toString(),
@@ -557,6 +558,7 @@
 
             $('#kembali_pembeli').val(formatRupiah((total - uang_pembeli).toString(), 'Rp. '));
         });
+        @endif
 
         $('#harga, #jumlah').keyup(function () {
             let harga = parseInt($('#harga_beli').val()) ? parseInt($('#harga_beli').val()) : parseInt($('#harga_jual').val());

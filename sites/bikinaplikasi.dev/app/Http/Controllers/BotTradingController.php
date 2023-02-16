@@ -95,7 +95,6 @@ class BotTradingController extends Controller
         curl_close($ch);
 
 
-
         $listOfContracts = $result;
         foreach (json_decode($listOfContracts, true)['data'] as $key => $priceAlert) {
             $file_name_to_check_set_bep = 'has_create_alerts_set_bep_' . $priceAlert['time'];
@@ -113,9 +112,15 @@ class BotTradingController extends Controller
             }
 
             // untuk add posisi buy
-            elseif ($priceAlert['positionSide'] == 'LONG' && $priceAlert['currentPrice'] >= $priceAlert['entryPrice'] * 1.035 && !file_exists($file_name_to_check_add_position)) {
+            elseif ($priceAlert['positionSide'] == 'LONG' && $priceAlert['currentPrice'] >= $priceAlert['entryPrice'] * 1.039 && !file_exists($file_name_to_check_add_position)) {
                 file_put_contents($file_name_to_check_add_position, "-");
                 $hargaUntukAddPosisi = $priceAlert['entryPrice'] * 1.040;
+
+                file_put_contents('membuka_posisi_dimulai', json_encode([
+                    'type' => 'add_position',
+                    'order_type' => '0',
+                    'price' => $priceAlert['currentPrice']
+                ]));
 
                 $response = $this->client()->request('GET', "http://api.callmebot.com/start.php?user=@ramdanriawan&text=Ayok add position buy sekarang untuk {$priceAlert["time"]} diharga $hargaUntukAddPosisi&lang=en-GB-Standard-B&rpt=2", [
 
@@ -133,9 +138,16 @@ class BotTradingController extends Controller
             }
             
             // untuk add posisi sell
-            elseif ($priceAlert['positionSide'] == 'SHORT' && $priceAlert['currentPrice'] <= $priceAlert['entryPrice'] * 0.965 && !file_exists($file_name_to_check_add_position)) {
+            elseif ($priceAlert['positionSide'] == 'SHORT' && $priceAlert['currentPrice'] <= $priceAlert['entryPrice'] * 0.961 && !file_exists($file_name_to_check_add_position)) {
                 file_put_contents($file_name_to_check_add_position, "-");
                 $hargaUntukAddPosisi = $priceAlert['entryPrice'] * 0.960;
+
+                file_put_contents('membuka_posisi_dimulai', json_encode([
+                    'type' => 'add_position',
+                    'order_type' => '1',
+                    'price' => $priceAlert['currentPrice']
+                ]));
+
                 $response = $this->client()->request('GET', "http://api.callmebot.com/start.php?user=@ramdanriawan&text=Ayok add position sell sekarang untuk {$priceAlert["time"]} diharga $hargaUntukAddPosisi&lang=en-GB-Standard-B&rpt=2", [
 
                 ]);
